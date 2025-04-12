@@ -1,0 +1,3815 @@
+From ffe426299a34083f4f9f7e34b8499c856072fed3 Mon Sep 17 00:00:00 2001
+Message-ID: <ffe426299a34083f4f9f7e34b8499c856072fed3.1744491225.git.matahina@posteo.net>
+From: matahina <matahina@posteo.net>
+Date: Sat, 12 Apr 2025 22:53:28 +0200
+Subject: [PATCH] the_patch_for_stk_speed
+
+from anonymouse-coder
+---
+ src/Doxyfile                                     |  0
+ src/Doxyfile_Win                                 |  0
+ src/achievements/achievement.cpp                 |  0
+ src/achievements/achievement.hpp                 |  0
+ src/achievements/achievement_info.cpp            |  0
+ src/achievements/achievement_info.hpp            |  0
+ src/achievements/achievements_manager.cpp        |  0
+ src/achievements/achievements_manager.hpp        |  0
+ src/achievements/achievements_status.cpp         |  0
+ src/achievements/achievements_status.hpp         |  0
+ src/achievements/web_achievements_status.cpp     |  0
+ src/achievements/web_achievements_status.hpp     |  0
+ src/addons/addon.cpp                             |  0
+ src/addons/addon.hpp                             |  0
+ src/addons/addons_manager.cpp                    |  0
+ src/addons/addons_manager.hpp                    |  0
+ src/addons/news_manager.cpp                      |  0
+ src/addons/news_manager.hpp                      |  0
+ src/addons/zip.cpp                               |  0
+ src/addons/zip.hpp                               |  0
+ src/animations/animation_base.cpp                |  0
+ src/animations/animation_base.hpp                |  0
+ src/animations/ipo.cpp                           |  0
+ src/animations/ipo.hpp                           |  0
+ src/animations/three_d_animation.cpp             |  0
+ src/animations/three_d_animation.hpp             |  0
+ src/audio/dummy_sfx.hpp                          |  0
+ src/audio/music.hpp                              |  0
+ src/audio/music_dummy.hpp                        |  0
+ src/audio/music_information.cpp                  |  0
+ src/audio/music_information.hpp                  |  0
+ src/audio/music_manager.cpp                      |  0
+ src/audio/music_manager.hpp                      |  0
+ src/audio/music_ogg.cpp                          |  0
+ src/audio/music_ogg.hpp                          |  0
+ src/audio/sfx_base.hpp                           |  0
+ src/audio/sfx_buffer.cpp                         |  0
+ src/audio/sfx_buffer.hpp                         |  0
+ src/audio/sfx_manager.cpp                        |  0
+ src/audio/sfx_manager.hpp                        |  0
+ src/audio/sfx_openal.cpp                         |  0
+ src/audio/sfx_openal.hpp                         |  0
+ src/challenges/challenge_data.cpp                |  0
+ src/challenges/challenge_data.hpp                |  0
+ src/challenges/challenge_status.cpp              |  0
+ src/challenges/challenge_status.hpp              |  0
+ src/challenges/story_mode_status.cpp             |  0
+ src/challenges/story_mode_status.hpp             |  0
+ src/challenges/story_mode_timer.cpp              |  0
+ src/challenges/story_mode_timer.hpp              |  0
+ src/challenges/unlock_manager.cpp                |  0
+ src/challenges/unlock_manager.hpp                |  0
+ src/config/hardware_stats.cpp                    |  0
+ src/config/hardware_stats.hpp                    |  0
+ src/config/player_manager.cpp                    |  0
+ src/config/player_manager.hpp                    |  0
+ src/config/player_profile.cpp                    |  0
+ src/config/player_profile.hpp                    |  0
+ src/config/saved_grand_prix.cpp                  |  0
+ src/config/saved_grand_prix.hpp                  |  0
+ src/config/stk_config.cpp                        |  0
+ src/config/stk_config.hpp                        |  0
+ src/config/user_config.cpp                       |  0
+ src/config/user_config.hpp                       |  0
+ src/font/bold_face.cpp                           |  0
+ src/font/bold_face.hpp                           |  0
+ src/font/digit_face.cpp                          |  0
+ src/font/digit_face.hpp                          |  0
+ src/font/face_ttf.hpp                            |  0
+ src/font/font_drawer.cpp                         |  0
+ src/font/font_drawer.hpp                         |  0
+ src/font/font_manager.cpp                        |  0
+ src/font/font_manager.hpp                        |  0
+ src/font/font_settings.hpp                       |  0
+ src/font/font_with_face.cpp                      |  0
+ src/font/font_with_face.hpp                      |  0
+ src/font/regular_face.cpp                        |  0
+ src/font/regular_face.hpp                        |  0
+ src/graphics/2dutils.cpp                         |  0
+ src/graphics/2dutils.hpp                         |  0
+ src/graphics/CBatchingMesh.cpp                   |  0
+ src/graphics/CBatchingMesh.hpp                   |  0
+ src/graphics/abstract_renderer.cpp               |  0
+ src/graphics/abstract_renderer.hpp               |  0
+ src/graphics/b3d_mesh_loader.cpp                 |  0
+ src/graphics/b3d_mesh_loader.hpp                 |  0
+ src/graphics/camera.cpp                          |  0
+ src/graphics/camera.hpp                          |  0
+ src/graphics/camera_debug.cpp                    |  0
+ src/graphics/camera_debug.hpp                    |  0
+ src/graphics/camera_end.cpp                      |  0
+ src/graphics/camera_end.hpp                      |  0
+ src/graphics/camera_fps.cpp                      |  0
+ src/graphics/camera_fps.hpp                      |  0
+ src/graphics/camera_normal.cpp                   |  0
+ src/graphics/camera_normal.hpp                   |  0
+ src/graphics/central_settings.cpp                |  0
+ src/graphics/central_settings.hpp                |  0
+ src/graphics/cpu_particle_manager.cpp            |  0
+ src/graphics/cpu_particle_manager.hpp            |  0
+ src/graphics/draw_calls.cpp                      |  0
+ src/graphics/draw_calls.hpp                      |  0
+ src/graphics/explosion.cpp                       |  0
+ src/graphics/explosion.hpp                       |  0
+ src/graphics/fixed_pipeline_renderer.cpp         |  0
+ src/graphics/fixed_pipeline_renderer.hpp         |  0
+ src/graphics/frame_buffer.hpp                    |  0
+ src/graphics/frame_buffer_layer.cpp              |  0
+ src/graphics/frame_buffer_layer.hpp              |  0
+ src/graphics/gl_headers.hpp                      |  0
+ src/graphics/glwrap.cpp                          |  0
+ src/graphics/glwrap.hpp                          |  0
+ src/graphics/graphics_restrictions.cpp           |  0
+ src/graphics/graphics_restrictions.hpp           |  0
+ src/graphics/hit_effect.hpp                      |  0
+ src/graphics/hit_sfx.cpp                         |  0
+ src/graphics/hit_sfx.hpp                         |  0
+ src/graphics/irr_driver.cpp                      |  0
+ src/graphics/irr_driver.hpp                      |  0
+ src/graphics/light.cpp                           |  0
+ src/graphics/light.hpp                           |  0
+ src/graphics/lighting_passes.cpp                 |  0
+ src/graphics/lighting_passes.hpp                 |  0
+ src/graphics/lod_node.cpp                        |  0
+ src/graphics/lod_node.hpp                        |  0
+ src/graphics/material.cpp                        |  0
+ src/graphics/material.hpp                        |  0
+ src/graphics/material_manager.cpp                |  0
+ src/graphics/material_manager.hpp                |  0
+ src/graphics/mesh_tools.cpp                      |  0
+ src/graphics/mesh_tools.hpp                      |  0
+ src/graphics/mlaa_areamap.hpp                    |  0
+ src/graphics/moving_texture.cpp                  |  0
+ src/graphics/moving_texture.hpp                  |  0
+ src/graphics/particle_emitter.cpp                |  0
+ src/graphics/particle_emitter.hpp                |  0
+ src/graphics/particle_kind.cpp                   |  0
+ src/graphics/particle_kind.hpp                   |  0
+ src/graphics/particle_kind_manager.cpp           |  0
+ src/graphics/particle_kind_manager.hpp           |  0
+ src/graphics/per_camera_node.cpp                 |  0
+ src/graphics/per_camera_node.hpp                 |  0
+ src/graphics/post_processing.cpp                 |  0
+ src/graphics/post_processing.hpp                 |  0
+ src/graphics/referee.cpp                         |  0
+ src/graphics/referee.hpp                         |  0
+ src/graphics/render_target.cpp                   |  0
+ src/graphics/render_target.hpp                   |  0
+ src/graphics/rtts.cpp                            |  0
+ src/graphics/rtts.hpp                            |  0
+ src/graphics/server_dummy_texture.hpp            |  0
+ src/graphics/shader.cpp                          |  0
+ src/graphics/shader.hpp                          |  0
+ src/graphics/shader_based_renderer.cpp           |  0
+ src/graphics/shader_based_renderer.hpp           |  0
+ src/graphics/shader_files_manager.cpp            |  0
+ src/graphics/shader_files_manager.hpp            |  0
+ src/graphics/shaders.cpp                         |  0
+ src/graphics/shaders.hpp                         |  0
+ src/graphics/shadow.cpp                          |  0
+ src/graphics/shadow.hpp                          |  0
+ src/graphics/shadow_matrices.cpp                 |  0
+ src/graphics/shadow_matrices.hpp                 |  0
+ src/graphics/shared_gpu_objects.cpp              |  0
+ src/graphics/shared_gpu_objects.hpp              |  0
+ src/graphics/show_curve.cpp                      |  0
+ src/graphics/show_curve.hpp                      |  0
+ src/graphics/skid_marks.cpp                      |  0
+ src/graphics/skid_marks.hpp                      |  0
+ src/graphics/skybox.cpp                          |  0
+ src/graphics/skybox.hpp                          |  0
+ src/graphics/slip_stream.cpp                     |  0
+ src/graphics/slip_stream.hpp                     |  0
+ src/graphics/sp/sp_base.cpp                      |  0
+ src/graphics/sp/sp_base.hpp                      |  0
+ src/graphics/sp/sp_dynamic_draw_call.cpp         |  0
+ src/graphics/sp/sp_dynamic_draw_call.hpp         |  0
+ src/graphics/sp/sp_instanced_data.hpp            |  0
+ src/graphics/sp/sp_mesh.cpp                      |  0
+ src/graphics/sp/sp_mesh.hpp                      |  0
+ src/graphics/sp/sp_mesh_buffer.cpp               |  0
+ src/graphics/sp/sp_mesh_buffer.hpp               |  0
+ src/graphics/sp/sp_mesh_node.cpp                 |  0
+ src/graphics/sp/sp_mesh_node.hpp                 |  0
+ src/graphics/sp/sp_per_object_uniform.cpp        |  0
+ src/graphics/sp/sp_per_object_uniform.hpp        |  0
+ src/graphics/sp/sp_shader.cpp                    |  0
+ src/graphics/sp/sp_shader.hpp                    |  0
+ src/graphics/sp/sp_shader_manager.cpp            |  0
+ src/graphics/sp/sp_shader_manager.hpp            |  0
+ src/graphics/sp/sp_texture.cpp                   |  0
+ src/graphics/sp/sp_texture.hpp                   |  0
+ src/graphics/sp/sp_texture_manager.cpp           |  0
+ src/graphics/sp/sp_texture_manager.hpp           |  0
+ src/graphics/sp/sp_uniform_assigner.hpp          |  0
+ src/graphics/sp_mesh_loader.cpp                  |  0
+ src/graphics/sp_mesh_loader.hpp                  |  0
+ src/graphics/spherical_harmonics.cpp             |  0
+ src/graphics/spherical_harmonics.hpp             |  0
+ src/graphics/stars.cpp                           |  0
+ src/graphics/stars.hpp                           |  0
+ src/graphics/stk_particle.cpp                    |  0
+ src/graphics/stk_particle.hpp                    |  0
+ src/graphics/stk_tex_manager.cpp                 |  0
+ src/graphics/stk_tex_manager.hpp                 |  0
+ src/graphics/stk_text_billboard.cpp              |  0
+ src/graphics/stk_text_billboard.hpp              |  0
+ src/graphics/sun.cpp                             |  0
+ src/graphics/sun.hpp                             |  0
+ src/graphics/text_billboard_drawer.cpp           |  0
+ src/graphics/text_billboard_drawer.hpp           |  0
+ src/graphics/texture_shader.cpp                  |  0
+ src/graphics/texture_shader.hpp                  |  0
+ src/graphics/weather.cpp                         |  0
+ src/graphics/weather.hpp                         |  0
+ src/graphics/wind.cpp                            |  0
+ src/graphics/wind.hpp                            |  0
+ src/guiengine/CGUISpriteBank.cpp                 |  0
+ src/guiengine/CGUISpriteBank.hpp                 |  0
+ src/guiengine/abstract_state_manager.cpp         |  0
+ src/guiengine/abstract_state_manager.hpp         |  0
+ src/guiengine/abstract_top_level_container.cpp   |  0
+ src/guiengine/abstract_top_level_container.hpp   |  0
+ src/guiengine/dialog_queue.cpp                   |  0
+ src/guiengine/dialog_queue.hpp                   |  0
+ src/guiengine/emoji_keyboard.cpp                 |  0
+ src/guiengine/emoji_keyboard.hpp                 |  0
+ src/guiengine/engine.cpp                         |  0
+ src/guiengine/engine.hpp                         |  0
+ src/guiengine/event_handler.cpp                  |  0
+ src/guiengine/event_handler.hpp                  |  0
+ src/guiengine/layout_manager.cpp                 |  0
+ src/guiengine/layout_manager.hpp                 |  0
+ src/guiengine/message_queue.cpp                  |  0
+ src/guiengine/message_queue.hpp                  |  0
+ src/guiengine/modaldialog.cpp                    |  0
+ src/guiengine/modaldialog.hpp                    |  0
+ src/guiengine/scalable_font.cpp                  |  0
+ src/guiengine/scalable_font.hpp                  |  0
+ src/guiengine/screen.cpp                         |  0
+ src/guiengine/screen.hpp                         |  0
+ src/guiengine/screen_keyboard.cpp                |  0
+ src/guiengine/screen_keyboard.hpp                |  0
+ src/guiengine/screen_loader.cpp                  |  0
+ src/guiengine/skin.cpp                           |  0
+ src/guiengine/skin.hpp                           |  0
+ src/guiengine/widget.cpp                         |  0
+ src/guiengine/widget.hpp                         |  0
+ src/guiengine/widgets.hpp                        |  0
+ src/guiengine/widgets/CGUIEditBox.cpp            |  0
+ src/guiengine/widgets/CGUIEditBox.hpp            |  0
+ src/guiengine/widgets/CGUISTKListBox.cpp         |  0
+ src/guiengine/widgets/CGUISTKListBox.hpp         |  0
+ src/guiengine/widgets/bubble_widget.cpp          |  0
+ src/guiengine/widgets/bubble_widget.hpp          |  0
+ src/guiengine/widgets/button_widget.cpp          |  0
+ src/guiengine/widgets/button_widget.hpp          |  0
+ src/guiengine/widgets/check_box_widget.cpp       |  0
+ src/guiengine/widgets/check_box_widget.hpp       |  0
+ src/guiengine/widgets/dynamic_ribbon_widget.cpp  |  0
+ src/guiengine/widgets/dynamic_ribbon_widget.hpp  |  0
+ src/guiengine/widgets/icon_button_widget.cpp     |  0
+ src/guiengine/widgets/icon_button_widget.hpp     |  0
+ src/guiengine/widgets/kart_stats_widget.cpp      |  0
+ src/guiengine/widgets/kart_stats_widget.hpp      |  0
+ src/guiengine/widgets/label_widget.cpp           |  0
+ src/guiengine/widgets/label_widget.hpp           |  0
+ src/guiengine/widgets/list_widget.cpp            |  0
+ src/guiengine/widgets/list_widget.hpp            |  0
+ src/guiengine/widgets/model_view_widget.cpp      |  0
+ src/guiengine/widgets/model_view_widget.hpp      |  0
+ src/guiengine/widgets/player_kart_widget.cpp     |  0
+ src/guiengine/widgets/player_kart_widget.hpp     |  0
+ src/guiengine/widgets/player_name_spinner.cpp    |  0
+ src/guiengine/widgets/player_name_spinner.hpp    |  0
+ src/guiengine/widgets/progress_bar_widget.cpp    |  0
+ src/guiengine/widgets/progress_bar_widget.hpp    |  0
+ src/guiengine/widgets/rating_bar_widget.cpp      |  0
+ src/guiengine/widgets/rating_bar_widget.hpp      |  0
+ src/guiengine/widgets/ribbon_widget.cpp          |  0
+ src/guiengine/widgets/ribbon_widget.hpp          |  0
+ src/guiengine/widgets/skill_level_widget.cpp     |  0
+ src/guiengine/widgets/skill_level_widget.hpp     |  0
+ src/guiengine/widgets/spinner_widget.cpp         |  0
+ src/guiengine/widgets/spinner_widget.hpp         |  0
+ src/guiengine/widgets/text_box_widget.cpp        |  0
+ src/guiengine/widgets/text_box_widget.hpp        |  0
+ src/input/binding.cpp                            |  0
+ src/input/binding.hpp                            |  0
+ src/input/device_config.cpp                      |  0
+ src/input/device_config.hpp                      |  0
+ src/input/device_manager.cpp                     |  0
+ src/input/device_manager.hpp                     |  0
+ src/input/gamepad_config.cpp                     |  0
+ src/input/gamepad_config.hpp                     |  0
+ src/input/gamepad_device.cpp                     |  0
+ src/input/gamepad_device.hpp                     |  0
+ src/input/input.hpp                              |  0
+ src/input/input_device.cpp                       |  0
+ src/input/input_device.hpp                       |  0
+ src/input/input_manager.cpp                      |  0
+ src/input/input_manager.hpp                      |  0
+ src/input/keyboard_config.cpp                    |  0
+ src/input/keyboard_config.hpp                    |  0
+ src/input/keyboard_device.cpp                    |  0
+ src/input/keyboard_device.hpp                    |  0
+ src/input/multitouch_device.cpp                  |  0
+ src/input/multitouch_device.hpp                  |  0
+ src/input/sdl_controller.cpp                     |  0
+ src/input/sdl_controller.hpp                     |  0
+ src/input/wiimote.cpp                            |  0
+ src/input/wiimote.hpp                            |  0
+ src/input/wiimote_manager.cpp                    |  0
+ src/input/wiimote_manager.hpp                    |  0
+ src/io/assets_android.cpp                        |  0
+ src/io/assets_android.hpp                        |  0
+ src/io/file_manager.cpp                          |  0
+ src/io/file_manager.hpp                          |  0
+ src/io/rich_presence.cpp                         |  0
+ src/io/rich_presence.hpp                         |  0
+ src/io/utf_writer.cpp                            |  0
+ src/io/utf_writer.hpp                            |  0
+ src/io/xml_node.cpp                              |  0
+ src/io/xml_node.hpp                              |  0
+ src/items/attachment.cpp                         |  0
+ src/items/attachment.hpp                         |  0
+ src/items/attachment_manager.cpp                 |  0
+ src/items/attachment_manager.hpp                 |  0
+ src/items/attachment_plugin.hpp                  |  0
+ src/items/bowling.cpp                            |  0
+ src/items/bowling.hpp                            |  0
+ src/items/cake.cpp                               |  0
+ src/items/cake.hpp                               |  0
+ src/items/flyable.cpp                            |  0
+ src/items/flyable.hpp                            |  0
+ src/items/item.cpp                               |  0
+ src/items/item.hpp                               |  0
+ src/items/item_event_info.cpp                    |  0
+ src/items/item_event_info.hpp                    |  0
+ src/items/item_manager.cpp                       |  0
+ src/items/item_manager.hpp                       |  0
+ src/items/network_item_manager.cpp               |  0
+ src/items/network_item_manager.hpp               |  0
+ src/items/plunger.cpp                            |  0
+ src/items/plunger.hpp                            |  0
+ src/items/powerup.cpp                            |  4 ++--
+ src/items/powerup.hpp                            |  0
+ src/items/powerup_manager.cpp                    |  0
+ src/items/powerup_manager.hpp                    |  0
+ src/items/projectile_manager.cpp                 |  0
+ src/items/projectile_manager.hpp                 |  0
+ src/items/rubber_ball.cpp                        |  0
+ src/items/rubber_ball.hpp                        |  0
+ src/items/rubber_band.cpp                        |  0
+ src/items/rubber_band.hpp                        |  0
+ src/items/swatter.cpp                            |  0
+ src/items/swatter.hpp                            |  0
+ src/karts/abstract_characteristic.cpp            |  0
+ src/karts/abstract_characteristic.hpp            |  0
+ src/karts/abstract_kart.cpp                      |  0
+ src/karts/abstract_kart.hpp                      |  0
+ src/karts/abstract_kart_animation.cpp            |  0
+ src/karts/abstract_kart_animation.hpp            |  0
+ src/karts/cached_characteristic.cpp              |  0
+ src/karts/cached_characteristic.hpp              |  0
+ src/karts/cannon_animation.cpp                   |  0
+ src/karts/cannon_animation.hpp                   |  0
+ src/karts/combined_characteristic.cpp            |  0
+ src/karts/combined_characteristic.hpp            |  0
+ src/karts/controller/ai_base_controller.cpp      |  0
+ src/karts/controller/ai_base_controller.hpp      |  0
+ src/karts/controller/ai_base_lap_controller.cpp  |  0
+ src/karts/controller/ai_base_lap_controller.hpp  |  0
+ src/karts/controller/ai_properties.cpp           |  0
+ src/karts/controller/ai_properties.hpp           |  0
+ src/karts/controller/arena_ai.cpp                |  0
+ src/karts/controller/arena_ai.hpp                |  0
+ src/karts/controller/battle_ai.cpp               |  0
+ src/karts/controller/battle_ai.hpp               |  0
+ src/karts/controller/controller.cpp              |  0
+ src/karts/controller/controller.hpp              |  0
+ src/karts/controller/end_controller.cpp          |  0
+ src/karts/controller/end_controller.hpp          |  0
+ src/karts/controller/ghost_controller.cpp        |  0
+ src/karts/controller/ghost_controller.hpp        |  0
+ src/karts/controller/kart_control.cpp            |  0
+ src/karts/controller/kart_control.hpp            |  0
+ src/karts/controller/local_player_controller.cpp |  0
+ src/karts/controller/local_player_controller.hpp |  0
+ src/karts/controller/network_ai_controller.cpp   |  0
+ src/karts/controller/network_ai_controller.hpp   |  0
+ .../controller/network_player_controller.hpp     |  0
+ src/karts/controller/player_controller.cpp       |  0
+ src/karts/controller/player_controller.hpp       |  0
+ src/karts/controller/skidding_ai.cpp             |  0
+ src/karts/controller/skidding_ai.hpp             |  0
+ src/karts/controller/soccer_ai.cpp               |  0
+ src/karts/controller/soccer_ai.hpp               |  0
+ src/karts/controller/spare_tire_ai.cpp           |  0
+ src/karts/controller/spare_tire_ai.hpp           |  0
+ src/karts/controller/test_ai.cpp                 |  0
+ src/karts/controller/test_ai.hpp                 |  0
+ src/karts/explosion_animation.cpp                |  0
+ src/karts/explosion_animation.hpp                |  0
+ src/karts/ghost_kart.cpp                         |  0
+ src/karts/ghost_kart.hpp                         |  0
+ src/karts/kart.cpp                               | 16 ++++++++--------
+ src/karts/kart.hpp                               |  0
+ src/karts/kart_gfx.cpp                           |  0
+ src/karts/kart_gfx.hpp                           |  0
+ src/karts/kart_model.cpp                         |  0
+ src/karts/kart_model.hpp                         |  0
+ src/karts/kart_properties.cpp                    |  8 ++++----
+ src/karts/kart_properties.hpp                    |  0
+ src/karts/kart_properties_manager.cpp            |  0
+ src/karts/kart_properties_manager.hpp            |  0
+ src/karts/kart_rewinder.cpp                      |  0
+ src/karts/kart_rewinder.hpp                      |  0
+ src/karts/kart_with_stats.cpp                    |  0
+ src/karts/kart_with_stats.hpp                    |  0
+ src/karts/max_speed.cpp                          |  6 +++---
+ src/karts/max_speed.hpp                          |  0
+ src/karts/moveable.cpp                           |  0
+ src/karts/moveable.hpp                           |  0
+ src/karts/official_karts.cpp                     |  0
+ src/karts/official_karts.hpp                     |  0
+ src/karts/rescue_animation.cpp                   |  0
+ src/karts/rescue_animation.hpp                   |  0
+ src/karts/skidding.cpp                           |  0
+ src/karts/skidding.hpp                           |  0
+ src/karts/xml_characteristic.cpp                 |  0
+ src/karts/xml_characteristic.hpp                 |  0
+ src/main.cpp                                     |  0
+ src/main_android.cpp                             |  0
+ src/main_loop.cpp                                |  0
+ src/main_loop.hpp                                |  0
+ src/modes/capture_the_flag.cpp                   |  0
+ src/modes/capture_the_flag.hpp                   |  0
+ src/modes/ctf_flag.cpp                           |  0
+ src/modes/ctf_flag.hpp                           |  0
+ src/modes/cutscene_world.cpp                     |  0
+ src/modes/cutscene_world.hpp                     |  0
+ src/modes/demo_world.cpp                         |  0
+ src/modes/demo_world.hpp                         |  0
+ src/modes/easter_egg_hunt.cpp                    |  0
+ src/modes/easter_egg_hunt.hpp                    |  0
+ src/modes/follow_the_leader.cpp                  |  0
+ src/modes/follow_the_leader.hpp                  |  0
+ src/modes/free_for_all.cpp                       |  0
+ src/modes/free_for_all.hpp                       |  0
+ src/modes/lap_trial.cpp                          |  0
+ src/modes/lap_trial.hpp                          |  0
+ src/modes/linear_world.cpp                       |  0
+ src/modes/linear_world.hpp                       |  0
+ src/modes/overworld.cpp                          |  0
+ src/modes/overworld.hpp                          |  0
+ src/modes/profile_world.cpp                      |  0
+ src/modes/profile_world.hpp                      |  0
+ src/modes/soccer_world.cpp                       |  0
+ src/modes/soccer_world.hpp                       |  0
+ src/modes/standard_race.cpp                      |  0
+ src/modes/standard_race.hpp                      |  0
+ src/modes/three_strikes_battle.cpp               |  0
+ src/modes/three_strikes_battle.hpp               |  0
+ src/modes/tutorial_world.cpp                     |  0
+ src/modes/tutorial_world.hpp                     |  0
+ src/modes/world.cpp                              |  0
+ src/modes/world.hpp                              |  0
+ src/modes/world_status.cpp                       |  0
+ src/modes/world_status.hpp                       |  0
+ src/modes/world_with_rank.cpp                    |  0
+ src/modes/world_with_rank.hpp                    |  0
+ src/network/child_loop.cpp                       |  0
+ src/network/child_loop.hpp                       |  0
+ src/network/compress_network_body.hpp            |  0
+ src/network/crypto.hpp                           |  0
+ src/network/crypto_mbedtls.cpp                   |  0
+ src/network/crypto_mbedtls.hpp                   |  0
+ src/network/crypto_openssl.cpp                   |  0
+ src/network/crypto_openssl.hpp                   |  0
+ src/network/dummy_rewinder.hpp                   |  0
+ src/network/event.cpp                            |  0
+ src/network/event.hpp                            |  0
+ src/network/event_rewinder.cpp                   |  0
+ src/network/event_rewinder.hpp                   |  0
+ src/network/game_setup.cpp                       |  0
+ src/network/game_setup.hpp                       |  0
+ src/network/kart_data.cpp                        |  0
+ src/network/kart_data.hpp                        |  0
+ src/network/network.cpp                          |  0
+ src/network/network.hpp                          |  0
+ src/network/network_config.cpp                   |  0
+ src/network/network_config.hpp                   |  0
+ src/network/network_console.cpp                  |  0
+ src/network/network_console.hpp                  |  0
+ src/network/network_player_profile.cpp           |  0
+ src/network/network_player_profile.hpp           |  0
+ src/network/network_string.cpp                   |  0
+ src/network/network_string.hpp                   |  0
+ src/network/network_timer_synchronizer.hpp       |  0
+ src/network/peer_vote.hpp                        |  0
+ src/network/protocol.cpp                         |  0
+ src/network/protocol.hpp                         |  0
+ src/network/protocol_manager.cpp                 |  0
+ src/network/protocol_manager.hpp                 |  0
+ src/network/protocols/client_lobby.cpp           |  0
+ src/network/protocols/client_lobby.hpp           |  0
+ src/network/protocols/connect_to_peer.cpp        |  0
+ src/network/protocols/connect_to_peer.hpp        |  0
+ src/network/protocols/connect_to_server.cpp      |  0
+ src/network/protocols/connect_to_server.hpp      |  0
+ src/network/protocols/game_events_protocol.cpp   |  0
+ src/network/protocols/game_events_protocol.hpp   |  0
+ src/network/protocols/game_protocol.cpp          |  0
+ src/network/protocols/game_protocol.hpp          |  0
+ src/network/protocols/lobby_protocol.cpp         |  0
+ src/network/protocols/lobby_protocol.hpp         |  0
+ src/network/protocols/server_lobby.cpp           |  0
+ src/network/protocols/server_lobby.hpp           |  0
+ src/network/race_event_manager.cpp               |  0
+ src/network/race_event_manager.hpp               |  0
+ src/network/remote_kart_info.cpp                 |  0
+ src/network/remote_kart_info.hpp                 |  0
+ src/network/rewind_info.cpp                      |  0
+ src/network/rewind_info.hpp                      |  0
+ src/network/rewind_manager.cpp                   |  0
+ src/network/rewind_manager.hpp                   |  0
+ src/network/rewind_queue.cpp                     |  0
+ src/network/rewind_queue.hpp                     |  0
+ src/network/rewinder.cpp                         |  0
+ src/network/rewinder.hpp                         |  0
+ src/network/server.cpp                           |  0
+ src/network/server.hpp                           |  0
+ src/network/server_config.cpp                    |  0
+ src/network/server_config.hpp                    |  0
+ src/network/servers_manager.cpp                  |  0
+ src/network/servers_manager.hpp                  |  0
+ src/network/smooth_network_body.cpp              |  0
+ src/network/smooth_network_body.hpp              |  0
+ src/network/socket_address.cpp                   |  0
+ src/network/socket_address.hpp                   |  0
+ src/network/stk_host.cpp                         |  0
+ src/network/stk_host.hpp                         |  0
+ src/network/stk_ipv6.cpp                         |  0
+ src/network/stk_ipv6.hpp                         |  0
+ src/network/stk_peer.cpp                         |  0
+ src/network/stk_peer.hpp                         |  0
+ src/network/stun_detection.hpp                   |  0
+ src/online/http_request.cpp                      |  0
+ src/online/http_request.hpp                      |  0
+ src/online/link_helper.cpp                       |  0
+ src/online/link_helper.hpp                       |  0
+ src/online/online_player_profile.cpp             |  0
+ src/online/online_player_profile.hpp             |  0
+ src/online/online_profile.cpp                    |  0
+ src/online/online_profile.hpp                    |  0
+ src/online/profile_manager.cpp                   |  0
+ src/online/profile_manager.hpp                   |  0
+ src/online/request.cpp                           |  0
+ src/online/request.hpp                           |  0
+ src/online/request_manager.cpp                   |  0
+ src/online/request_manager.hpp                   |  0
+ src/online/xml_request.cpp                       |  0
+ src/online/xml_request.hpp                       |  0
+ src/physics/btKart.cpp                           |  0
+ src/physics/btKart.hpp                           |  0
+ src/physics/btKartRaycast.cpp                    |  0
+ src/physics/btKartRaycast.hpp                    |  0
+ src/physics/irr_debug_drawer.cpp                 |  0
+ src/physics/irr_debug_drawer.hpp                 |  0
+ src/physics/kart_motion_state.hpp                |  0
+ src/physics/physical_object.cpp                  |  0
+ src/physics/physical_object.hpp                  |  0
+ src/physics/physics.cpp                          |  0
+ src/physics/physics.hpp                          |  0
+ src/physics/stk_dynamics_world.hpp               |  0
+ src/physics/triangle_mesh.cpp                    |  0
+ src/physics/triangle_mesh.hpp                    |  0
+ src/physics/user_pointer.hpp                     |  0
+ src/race/grand_prix_data.cpp                     |  0
+ src/race/grand_prix_data.hpp                     |  0
+ src/race/grand_prix_manager.cpp                  |  0
+ src/race/grand_prix_manager.hpp                  |  0
+ src/race/highscore_manager.cpp                   |  0
+ src/race/highscore_manager.hpp                   |  0
+ src/race/highscores.cpp                          |  0
+ src/race/highscores.hpp                          |  0
+ src/race/history.cpp                             |  0
+ src/race/history.hpp                             |  0
+ src/race/race_manager.cpp                        |  0
+ src/race/race_manager.hpp                        |  0
+ src/replay/replay_base.cpp                       |  0
+ src/replay/replay_base.hpp                       |  0
+ src/replay/replay_play.cpp                       |  0
+ src/replay/replay_play.hpp                       |  0
+ src/replay/replay_recorder.cpp                   |  0
+ src/replay/replay_recorder.hpp                   |  0
+ src/scriptengine/aswrappedcall.hpp               |  0
+ src/scriptengine/property_animator.cpp           |  0
+ src/scriptengine/property_animator.hpp           |  0
+ src/scriptengine/script_audio.cpp                |  0
+ src/scriptengine/script_audio.hpp                |  0
+ src/scriptengine/script_challenges.cpp           |  0
+ src/scriptengine/script_challenges.hpp           |  0
+ src/scriptengine/script_engine.cpp               |  0
+ src/scriptengine/script_engine.hpp               |  0
+ src/scriptengine/script_gui.cpp                  |  0
+ src/scriptengine/script_gui.hpp                  |  0
+ src/scriptengine/script_kart.cpp                 |  0
+ src/scriptengine/script_kart.hpp                 |  0
+ src/scriptengine/script_physics.cpp              |  0
+ src/scriptengine/script_physics.hpp              |  0
+ src/scriptengine/script_track.cpp                |  0
+ src/scriptengine/script_track.hpp                |  0
+ src/scriptengine/script_utils.cpp                |  0
+ src/scriptengine/script_utils.hpp                |  0
+ src/scriptengine/scriptarray.cpp                 |  0
+ src/scriptengine/scriptarray.hpp                 |  0
+ src/scriptengine/scriptstdstring.cpp             |  0
+ src/scriptengine/scriptstdstring.hpp             |  0
+ src/scriptengine/scriptstdstring_utils.cpp       |  0
+ src/scriptengine/scriptvec3.cpp                  |  0
+ src/scriptengine/scriptvec3.hpp                  |  0
+ src/states_screens/addons_screen.cpp             |  0
+ src/states_screens/addons_screen.hpp             |  0
+ src/states_screens/arenas_screen.cpp             |  0
+ src/states_screens/arenas_screen.hpp             |  0
+ src/states_screens/credits.cpp                   |  0
+ src/states_screens/credits.hpp                   |  0
+ src/states_screens/cutscene_general.cpp          |  0
+ src/states_screens/cutscene_general.hpp          |  0
+ src/states_screens/cutscene_gui.cpp              |  0
+ src/states_screens/cutscene_gui.hpp              |  0
+ .../dialogs/achievement_progress_dialog.cpp      |  0
+ .../dialogs/achievement_progress_dialog.hpp      |  0
+ src/states_screens/dialogs/add_device_dialog.cpp |  0
+ src/states_screens/dialogs/add_device_dialog.hpp |  0
+ src/states_screens/dialogs/addons_loading.cpp    |  0
+ src/states_screens/dialogs/addons_loading.hpp    |  0
+ src/states_screens/dialogs/addons_pack.cpp       |  0
+ src/states_screens/dialogs/addons_pack.hpp       |  0
+ .../dialogs/change_password_dialog.cpp           |  0
+ .../dialogs/change_password_dialog.hpp           |  0
+ .../dialogs/confirm_resolution_dialog.cpp        |  0
+ .../dialogs/confirm_resolution_dialog.hpp        |  0
+ .../dialogs/custom_camera_settings.cpp           |  0
+ .../dialogs/custom_camera_settings.hpp           |  0
+ .../dialogs/custom_video_settings.cpp            |  0
+ .../dialogs/custom_video_settings.hpp            |  0
+ src/states_screens/dialogs/debug_slider.cpp      |  0
+ src/states_screens/dialogs/debug_slider.hpp      |  0
+ src/states_screens/dialogs/download_assets.cpp   |  0
+ src/states_screens/dialogs/download_assets.hpp   |  0
+ .../dialogs/enter_address_dialog.cpp             |  0
+ .../dialogs/enter_address_dialog.hpp             |  0
+ .../dialogs/general_text_field_dialog.cpp        |  0
+ .../dialogs/general_text_field_dialog.hpp        |  0
+ .../dialogs/ghost_replay_info_dialog.cpp         |  0
+ .../dialogs/ghost_replay_info_dialog.hpp         |  0
+ .../dialogs/high_score_info_dialog.cpp           |  0
+ .../dialogs/high_score_info_dialog.hpp           |  0
+ .../dialogs/init_android_dialog.cpp              |  0
+ .../dialogs/init_android_dialog.hpp              |  0
+ .../dialogs/kart_color_slider_dialog.cpp         |  0
+ .../dialogs/kart_color_slider_dialog.hpp         |  0
+ src/states_screens/dialogs/message_dialog.cpp    |  0
+ src/states_screens/dialogs/message_dialog.hpp    |  0
+ .../dialogs/multitouch_settings_dialog.cpp       |  0
+ .../dialogs/multitouch_settings_dialog.hpp       |  0
+ .../dialogs/network_player_dialog.cpp            |  0
+ .../dialogs/network_player_dialog.hpp            |  0
+ .../dialogs/player_rankings_dialog.cpp           |  0
+ .../dialogs/player_rankings_dialog.hpp           |  0
+ .../dialogs/press_a_key_dialog.cpp               |  0
+ .../dialogs/press_a_key_dialog.hpp               |  0
+ .../dialogs/race_paused_dialog.cpp               |  0
+ .../dialogs/race_paused_dialog.hpp               |  0
+ src/states_screens/dialogs/ranking_callback.hpp  |  0
+ src/states_screens/dialogs/recovery_dialog.cpp   |  0
+ src/states_screens/dialogs/recovery_dialog.hpp   |  0
+ .../dialogs/registration_dialog.cpp              |  0
+ .../dialogs/registration_dialog.hpp              |  0
+ src/states_screens/dialogs/select_challenge.cpp  |  0
+ src/states_screens/dialogs/select_challenge.hpp  |  0
+ .../dialogs/server_configuration_dialog.cpp      |  0
+ .../dialogs/server_configuration_dialog.hpp      |  0
+ .../dialogs/server_info_dialog.cpp               |  0
+ .../dialogs/server_info_dialog.hpp               |  0
+ .../dialogs/splitscreen_player_dialog.cpp        |  0
+ .../dialogs/splitscreen_player_dialog.hpp        |  0
+ .../dialogs/tutorial_message_dialog.cpp          |  0
+ .../dialogs/tutorial_message_dialog.hpp          |  0
+ src/states_screens/dialogs/user_info_dialog.cpp  |  0
+ src/states_screens/dialogs/user_info_dialog.hpp  |  0
+ src/states_screens/dialogs/vote_dialog.cpp       |  0
+ src/states_screens/dialogs/vote_dialog.hpp       |  0
+ src/states_screens/easter_egg_screen.cpp         |  0
+ src/states_screens/easter_egg_screen.hpp         |  0
+ src/states_screens/edit_gp_screen.cpp            |  0
+ src/states_screens/edit_gp_screen.hpp            |  0
+ src/states_screens/edit_track_screen.cpp         |  0
+ src/states_screens/edit_track_screen.hpp         |  0
+ src/states_screens/feature_unlocked.cpp          |  0
+ src/states_screens/feature_unlocked.hpp          |  0
+ src/states_screens/ghost_replay_selection.cpp    |  0
+ src/states_screens/ghost_replay_selection.hpp    |  0
+ src/states_screens/gp_info_screen.cpp            |  0
+ src/states_screens/gp_info_screen.hpp            |  0
+ src/states_screens/grand_prix_cutscene.cpp       |  0
+ src/states_screens/grand_prix_cutscene.hpp       |  0
+ src/states_screens/grand_prix_editor_screen.cpp  |  0
+ src/states_screens/grand_prix_editor_screen.hpp  |  0
+ src/states_screens/grand_prix_lose.cpp           |  0
+ src/states_screens/grand_prix_lose.hpp           |  0
+ src/states_screens/grand_prix_win.cpp            |  0
+ src/states_screens/grand_prix_win.hpp            |  0
+ src/states_screens/help_screen_1.cpp             |  0
+ src/states_screens/help_screen_1.hpp             |  0
+ src/states_screens/help_screen_2.cpp             |  0
+ src/states_screens/help_screen_2.hpp             |  0
+ src/states_screens/help_screen_3.cpp             |  0
+ src/states_screens/help_screen_3.hpp             |  0
+ src/states_screens/help_screen_4.cpp             |  0
+ src/states_screens/help_screen_4.hpp             |  0
+ src/states_screens/help_screen_5.cpp             |  0
+ src/states_screens/help_screen_5.hpp             |  0
+ src/states_screens/help_screen_6.cpp             |  0
+ src/states_screens/help_screen_6.hpp             |  0
+ src/states_screens/help_screen_7.cpp             |  0
+ src/states_screens/help_screen_7.hpp             |  0
+ src/states_screens/high_score_selection.cpp      |  0
+ src/states_screens/high_score_selection.hpp      |  0
+ src/states_screens/kart_selection.cpp            |  0
+ src/states_screens/kart_selection.hpp            |  0
+ src/states_screens/main_menu_screen.cpp          |  0
+ src/states_screens/main_menu_screen.hpp          |  0
+ src/states_screens/offline_kart_selection.cpp    |  0
+ src/states_screens/offline_kart_selection.hpp    |  0
+ .../online/create_server_screen.cpp              |  0
+ .../online/create_server_screen.hpp              |  0
+ .../online/network_kart_selection.cpp            |  0
+ .../online/network_kart_selection.hpp            |  0
+ src/states_screens/online/networking_lobby.cpp   |  0
+ src/states_screens/online/networking_lobby.hpp   |  0
+ src/states_screens/online/online_lan.cpp         |  0
+ src/states_screens/online/online_lan.hpp         |  0
+ .../online/online_profile_achievements.cpp       |  0
+ .../online/online_profile_achievements.hpp       |  0
+ .../online/online_profile_base.cpp               |  0
+ .../online/online_profile_base.hpp               |  0
+ .../online/online_profile_friends.cpp            |  0
+ .../online/online_profile_friends.hpp            |  0
+ .../online/online_profile_servers.cpp            |  0
+ .../online/online_profile_servers.hpp            |  0
+ .../online/online_profile_settings.cpp           |  0
+ .../online/online_profile_settings.hpp           |  0
+ src/states_screens/online/online_screen.cpp      |  0
+ src/states_screens/online/online_screen.hpp      |  0
+ src/states_screens/online/online_user_search.cpp |  0
+ src/states_screens/online/online_user_search.hpp |  0
+ src/states_screens/online/register_screen.cpp    |  0
+ src/states_screens/online/register_screen.hpp    |  0
+ src/states_screens/online/server_selection.cpp   |  0
+ src/states_screens/online/server_selection.hpp   |  0
+ src/states_screens/online/tracks_screen.cpp      |  0
+ src/states_screens/online/tracks_screen.hpp      |  0
+ .../options/options_screen_audio.cpp             |  0
+ .../options/options_screen_audio.hpp             |  0
+ .../options/options_screen_device.cpp            |  0
+ .../options/options_screen_device.hpp            |  0
+ .../options/options_screen_general.cpp           |  0
+ .../options/options_screen_general.hpp           |  0
+ .../options/options_screen_input.cpp             |  0
+ .../options/options_screen_input.hpp             |  0
+ .../options/options_screen_language.cpp          |  0
+ .../options/options_screen_language.hpp          |  0
+ src/states_screens/options/options_screen_ui.cpp |  0
+ src/states_screens/options/options_screen_ui.hpp |  0
+ .../options/options_screen_video.cpp             |  0
+ .../options/options_screen_video.hpp             |  0
+ src/states_screens/options/user_screen.cpp       |  0
+ src/states_screens/options/user_screen.hpp       |  0
+ src/states_screens/race_gui.cpp                  |  0
+ src/states_screens/race_gui.hpp                  |  0
+ src/states_screens/race_gui_base.cpp             |  0
+ src/states_screens/race_gui_base.hpp             |  0
+ src/states_screens/race_gui_multitouch.cpp       |  0
+ src/states_screens/race_gui_multitouch.hpp       |  0
+ src/states_screens/race_gui_overworld.cpp        |  0
+ src/states_screens/race_gui_overworld.hpp        |  0
+ src/states_screens/race_result_gui.cpp           |  0
+ src/states_screens/race_result_gui.hpp           |  0
+ src/states_screens/race_setup_screen.cpp         |  0
+ src/states_screens/race_setup_screen.hpp         |  0
+ src/states_screens/soccer_setup_screen.cpp       |  0
+ src/states_screens/soccer_setup_screen.hpp       |  0
+ src/states_screens/state_manager.cpp             |  0
+ src/states_screens/state_manager.hpp             |  0
+ src/states_screens/track_info_screen.cpp         |  0
+ src/states_screens/track_info_screen.hpp         |  0
+ src/states_screens/tracks_and_gp_screen.cpp      |  0
+ src/states_screens/tracks_and_gp_screen.hpp      |  0
+ src/tips/tips_manager.cpp                        |  0
+ src/tips/tips_manager.hpp                        |  0
+ src/tracks/arena_graph.cpp                       |  0
+ src/tracks/arena_graph.hpp                       |  0
+ src/tracks/arena_node.cpp                        |  0
+ src/tracks/arena_node.hpp                        |  0
+ src/tracks/arena_node_3d.hpp                     |  0
+ src/tracks/bezier_curve.cpp                      |  0
+ src/tracks/bezier_curve.hpp                      |  0
+ src/tracks/bounding_box_3d.hpp                   |  0
+ src/tracks/check_cannon.cpp                      |  0
+ src/tracks/check_cannon.hpp                      |  0
+ src/tracks/check_cylinder.cpp                    |  0
+ src/tracks/check_cylinder.hpp                    |  0
+ src/tracks/check_goal.cpp                        |  0
+ src/tracks/check_goal.hpp                        |  0
+ src/tracks/check_lap.cpp                         |  0
+ src/tracks/check_lap.hpp                         |  0
+ src/tracks/check_line.cpp                        |  0
+ src/tracks/check_line.hpp                        |  0
+ src/tracks/check_manager.cpp                     |  0
+ src/tracks/check_manager.hpp                     |  0
+ src/tracks/check_sphere.cpp                      |  0
+ src/tracks/check_sphere.hpp                      |  0
+ src/tracks/check_structure.cpp                   |  0
+ src/tracks/check_structure.hpp                   |  0
+ src/tracks/check_trigger.cpp                     |  0
+ src/tracks/check_trigger.hpp                     |  0
+ src/tracks/drive_graph.cpp                       |  0
+ src/tracks/drive_graph.hpp                       |  0
+ src/tracks/drive_node.cpp                        |  0
+ src/tracks/drive_node.hpp                        |  0
+ src/tracks/drive_node_2d.cpp                     |  0
+ src/tracks/drive_node_2d.hpp                     |  0
+ src/tracks/drive_node_3d.cpp                     |  0
+ src/tracks/drive_node_3d.hpp                     |  0
+ src/tracks/graph.cpp                             |  0
+ src/tracks/graph.hpp                             |  0
+ src/tracks/model_definition_loader.cpp           |  0
+ src/tracks/model_definition_loader.hpp           |  0
+ src/tracks/quad.cpp                              |  0
+ src/tracks/quad.hpp                              |  0
+ src/tracks/terrain_info.cpp                      |  0
+ src/tracks/terrain_info.hpp                      |  0
+ src/tracks/track.cpp                             |  0
+ src/tracks/track.hpp                             |  2 +-
+ src/tracks/track_manager.cpp                     |  0
+ src/tracks/track_manager.hpp                     |  0
+ src/tracks/track_object.cpp                      |  0
+ src/tracks/track_object.hpp                      |  0
+ src/tracks/track_object_manager.cpp              |  0
+ src/tracks/track_object_manager.hpp              |  0
+ src/tracks/track_object_presentation.cpp         |  0
+ src/tracks/track_object_presentation.hpp         |  0
+ src/tracks/track_sector.cpp                      |  0
+ src/tracks/track_sector.hpp                      |  0
+ src/utils/aligned_array.hpp                      |  0
+ src/utils/can_be_deleted.hpp                     |  0
+ src/utils/command_line.cpp                       |  0
+ src/utils/command_line.hpp                       |  0
+ src/utils/constants.cpp                          |  0
+ src/utils/constants.hpp                          |  0
+ src/utils/cpp2011.hpp                            |  0
+ src/utils/crash_reporting.cpp                    |  0
+ src/utils/crash_reporting.hpp                    |  0
+ src/utils/debug.cpp                              |  0
+ src/utils/debug.hpp                              |  0
+ src/utils/download_assets_size.hpp               |  0
+ src/utils/extract_mobile_assets.cpp              |  0
+ src/utils/extract_mobile_assets.hpp              |  0
+ src/utils/file_utils.cpp                         |  0
+ src/utils/file_utils.hpp                         |  0
+ src/utils/helpers.cpp                            |  0
+ src/utils/helpers.hpp                            |  0
+ src/utils/interpolation_array.hpp                |  0
+ src/utils/leak_check.cpp                         |  0
+ src/utils/leak_check.hpp                         |  0
+ src/utils/log.cpp                                |  0
+ src/utils/log.hpp                                |  0
+ src/utils/mem_utils.hpp                          |  0
+ src/utils/mini_glm.cpp                           |  0
+ src/utils/no_copy.hpp                            |  0
+ src/utils/profiler.cpp                           |  0
+ src/utils/profiler.hpp                           |  0
+ src/utils/progress_bar_android.cpp               |  0
+ src/utils/progress_bar_android.hpp               |  0
+ src/utils/ptr_vector.hpp                         |  0
+ src/utils/random_generator.cpp                   |  0
+ src/utils/random_generator.hpp                   |  0
+ src/utils/singleton.hpp                          |  0
+ src/utils/stk_process.cpp                        |  0
+ src/utils/stk_process.hpp                        |  0
+ src/utils/string_utils.cpp                       |  0
+ src/utils/string_utils.hpp                       |  0
+ src/utils/synchronised.hpp                       |  0
+ src/utils/time.cpp                               |  0
+ src/utils/time.hpp                               |  0
+ src/utils/tls.hpp                                |  0
+ src/utils/translation.cpp                        |  0
+ src/utils/translation.hpp                        |  0
+ src/utils/types.hpp                              |  0
+ src/utils/utf8.h                                 |  0
+ src/utils/utf8/checked.h                         |  0
+ src/utils/utf8/core.h                            |  0
+ src/utils/utf8/unchecked.h                       |  0
+ src/utils/vec3.cpp                               |  0
+ src/utils/vec3.hpp                               |  0
+ src/utils/vs.hpp                                 |  0
+ 910 files changed, 18 insertions(+), 18 deletions(-)
+
+diff --git a/src/Doxyfile b/src/Doxyfile
+old mode 100644
+new mode 100755
+diff --git a/src/Doxyfile_Win b/src/Doxyfile_Win
+old mode 100644
+new mode 100755
+diff --git a/src/achievements/achievement.cpp b/src/achievements/achievement.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/achievements/achievement.hpp b/src/achievements/achievement.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/achievements/achievement_info.cpp b/src/achievements/achievement_info.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/achievements/achievement_info.hpp b/src/achievements/achievement_info.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/achievements/achievements_manager.cpp b/src/achievements/achievements_manager.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/achievements/achievements_manager.hpp b/src/achievements/achievements_manager.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/achievements/achievements_status.cpp b/src/achievements/achievements_status.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/achievements/achievements_status.hpp b/src/achievements/achievements_status.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/achievements/web_achievements_status.cpp b/src/achievements/web_achievements_status.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/achievements/web_achievements_status.hpp b/src/achievements/web_achievements_status.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/addons/addon.cpp b/src/addons/addon.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/addons/addon.hpp b/src/addons/addon.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/addons/addons_manager.cpp b/src/addons/addons_manager.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/addons/addons_manager.hpp b/src/addons/addons_manager.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/addons/news_manager.cpp b/src/addons/news_manager.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/addons/news_manager.hpp b/src/addons/news_manager.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/addons/zip.cpp b/src/addons/zip.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/addons/zip.hpp b/src/addons/zip.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/animations/animation_base.cpp b/src/animations/animation_base.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/animations/animation_base.hpp b/src/animations/animation_base.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/animations/ipo.cpp b/src/animations/ipo.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/animations/ipo.hpp b/src/animations/ipo.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/animations/three_d_animation.cpp b/src/animations/three_d_animation.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/animations/three_d_animation.hpp b/src/animations/three_d_animation.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/audio/dummy_sfx.hpp b/src/audio/dummy_sfx.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/audio/music.hpp b/src/audio/music.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/audio/music_dummy.hpp b/src/audio/music_dummy.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/audio/music_information.cpp b/src/audio/music_information.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/audio/music_information.hpp b/src/audio/music_information.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/audio/music_manager.cpp b/src/audio/music_manager.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/audio/music_manager.hpp b/src/audio/music_manager.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/audio/music_ogg.cpp b/src/audio/music_ogg.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/audio/music_ogg.hpp b/src/audio/music_ogg.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/audio/sfx_base.hpp b/src/audio/sfx_base.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/audio/sfx_buffer.cpp b/src/audio/sfx_buffer.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/audio/sfx_buffer.hpp b/src/audio/sfx_buffer.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/audio/sfx_manager.cpp b/src/audio/sfx_manager.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/audio/sfx_manager.hpp b/src/audio/sfx_manager.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/audio/sfx_openal.cpp b/src/audio/sfx_openal.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/audio/sfx_openal.hpp b/src/audio/sfx_openal.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/challenges/challenge_data.cpp b/src/challenges/challenge_data.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/challenges/challenge_data.hpp b/src/challenges/challenge_data.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/challenges/challenge_status.cpp b/src/challenges/challenge_status.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/challenges/challenge_status.hpp b/src/challenges/challenge_status.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/challenges/story_mode_status.cpp b/src/challenges/story_mode_status.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/challenges/story_mode_status.hpp b/src/challenges/story_mode_status.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/challenges/story_mode_timer.cpp b/src/challenges/story_mode_timer.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/challenges/story_mode_timer.hpp b/src/challenges/story_mode_timer.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/challenges/unlock_manager.cpp b/src/challenges/unlock_manager.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/challenges/unlock_manager.hpp b/src/challenges/unlock_manager.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/config/hardware_stats.cpp b/src/config/hardware_stats.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/config/hardware_stats.hpp b/src/config/hardware_stats.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/config/player_manager.cpp b/src/config/player_manager.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/config/player_manager.hpp b/src/config/player_manager.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/config/player_profile.cpp b/src/config/player_profile.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/config/player_profile.hpp b/src/config/player_profile.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/config/saved_grand_prix.cpp b/src/config/saved_grand_prix.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/config/saved_grand_prix.hpp b/src/config/saved_grand_prix.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/config/stk_config.cpp b/src/config/stk_config.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/config/stk_config.hpp b/src/config/stk_config.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/config/user_config.cpp b/src/config/user_config.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/config/user_config.hpp b/src/config/user_config.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/font/bold_face.cpp b/src/font/bold_face.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/font/bold_face.hpp b/src/font/bold_face.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/font/digit_face.cpp b/src/font/digit_face.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/font/digit_face.hpp b/src/font/digit_face.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/font/face_ttf.hpp b/src/font/face_ttf.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/font/font_drawer.cpp b/src/font/font_drawer.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/font/font_drawer.hpp b/src/font/font_drawer.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/font/font_manager.cpp b/src/font/font_manager.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/font/font_manager.hpp b/src/font/font_manager.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/font/font_settings.hpp b/src/font/font_settings.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/font/font_with_face.cpp b/src/font/font_with_face.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/font/font_with_face.hpp b/src/font/font_with_face.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/font/regular_face.cpp b/src/font/regular_face.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/font/regular_face.hpp b/src/font/regular_face.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/2dutils.cpp b/src/graphics/2dutils.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/2dutils.hpp b/src/graphics/2dutils.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/CBatchingMesh.cpp b/src/graphics/CBatchingMesh.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/CBatchingMesh.hpp b/src/graphics/CBatchingMesh.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/abstract_renderer.cpp b/src/graphics/abstract_renderer.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/abstract_renderer.hpp b/src/graphics/abstract_renderer.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/b3d_mesh_loader.cpp b/src/graphics/b3d_mesh_loader.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/b3d_mesh_loader.hpp b/src/graphics/b3d_mesh_loader.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/camera.cpp b/src/graphics/camera.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/camera.hpp b/src/graphics/camera.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/camera_debug.cpp b/src/graphics/camera_debug.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/camera_debug.hpp b/src/graphics/camera_debug.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/camera_end.cpp b/src/graphics/camera_end.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/camera_end.hpp b/src/graphics/camera_end.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/camera_fps.cpp b/src/graphics/camera_fps.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/camera_fps.hpp b/src/graphics/camera_fps.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/camera_normal.cpp b/src/graphics/camera_normal.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/camera_normal.hpp b/src/graphics/camera_normal.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/central_settings.cpp b/src/graphics/central_settings.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/central_settings.hpp b/src/graphics/central_settings.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/cpu_particle_manager.cpp b/src/graphics/cpu_particle_manager.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/cpu_particle_manager.hpp b/src/graphics/cpu_particle_manager.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/draw_calls.cpp b/src/graphics/draw_calls.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/draw_calls.hpp b/src/graphics/draw_calls.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/explosion.cpp b/src/graphics/explosion.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/explosion.hpp b/src/graphics/explosion.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/fixed_pipeline_renderer.cpp b/src/graphics/fixed_pipeline_renderer.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/fixed_pipeline_renderer.hpp b/src/graphics/fixed_pipeline_renderer.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/frame_buffer.hpp b/src/graphics/frame_buffer.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/frame_buffer_layer.cpp b/src/graphics/frame_buffer_layer.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/frame_buffer_layer.hpp b/src/graphics/frame_buffer_layer.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/gl_headers.hpp b/src/graphics/gl_headers.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/glwrap.cpp b/src/graphics/glwrap.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/glwrap.hpp b/src/graphics/glwrap.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/graphics_restrictions.cpp b/src/graphics/graphics_restrictions.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/graphics_restrictions.hpp b/src/graphics/graphics_restrictions.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/hit_effect.hpp b/src/graphics/hit_effect.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/hit_sfx.cpp b/src/graphics/hit_sfx.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/hit_sfx.hpp b/src/graphics/hit_sfx.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/irr_driver.cpp b/src/graphics/irr_driver.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/irr_driver.hpp b/src/graphics/irr_driver.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/light.cpp b/src/graphics/light.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/light.hpp b/src/graphics/light.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/lighting_passes.cpp b/src/graphics/lighting_passes.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/lighting_passes.hpp b/src/graphics/lighting_passes.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/lod_node.cpp b/src/graphics/lod_node.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/lod_node.hpp b/src/graphics/lod_node.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/material.cpp b/src/graphics/material.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/material.hpp b/src/graphics/material.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/material_manager.cpp b/src/graphics/material_manager.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/material_manager.hpp b/src/graphics/material_manager.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/mesh_tools.cpp b/src/graphics/mesh_tools.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/mesh_tools.hpp b/src/graphics/mesh_tools.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/mlaa_areamap.hpp b/src/graphics/mlaa_areamap.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/moving_texture.cpp b/src/graphics/moving_texture.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/moving_texture.hpp b/src/graphics/moving_texture.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/particle_emitter.cpp b/src/graphics/particle_emitter.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/particle_emitter.hpp b/src/graphics/particle_emitter.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/particle_kind.cpp b/src/graphics/particle_kind.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/particle_kind.hpp b/src/graphics/particle_kind.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/particle_kind_manager.cpp b/src/graphics/particle_kind_manager.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/particle_kind_manager.hpp b/src/graphics/particle_kind_manager.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/per_camera_node.cpp b/src/graphics/per_camera_node.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/per_camera_node.hpp b/src/graphics/per_camera_node.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/post_processing.cpp b/src/graphics/post_processing.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/post_processing.hpp b/src/graphics/post_processing.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/referee.cpp b/src/graphics/referee.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/referee.hpp b/src/graphics/referee.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/render_target.cpp b/src/graphics/render_target.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/render_target.hpp b/src/graphics/render_target.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/rtts.cpp b/src/graphics/rtts.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/rtts.hpp b/src/graphics/rtts.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/server_dummy_texture.hpp b/src/graphics/server_dummy_texture.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/shader.cpp b/src/graphics/shader.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/shader.hpp b/src/graphics/shader.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/shader_based_renderer.cpp b/src/graphics/shader_based_renderer.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/shader_based_renderer.hpp b/src/graphics/shader_based_renderer.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/shader_files_manager.cpp b/src/graphics/shader_files_manager.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/shader_files_manager.hpp b/src/graphics/shader_files_manager.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/shaders.cpp b/src/graphics/shaders.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/shaders.hpp b/src/graphics/shaders.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/shadow.cpp b/src/graphics/shadow.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/shadow.hpp b/src/graphics/shadow.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/shadow_matrices.cpp b/src/graphics/shadow_matrices.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/shadow_matrices.hpp b/src/graphics/shadow_matrices.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/shared_gpu_objects.cpp b/src/graphics/shared_gpu_objects.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/shared_gpu_objects.hpp b/src/graphics/shared_gpu_objects.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/show_curve.cpp b/src/graphics/show_curve.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/show_curve.hpp b/src/graphics/show_curve.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/skid_marks.cpp b/src/graphics/skid_marks.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/skid_marks.hpp b/src/graphics/skid_marks.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/skybox.cpp b/src/graphics/skybox.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/skybox.hpp b/src/graphics/skybox.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/slip_stream.cpp b/src/graphics/slip_stream.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/slip_stream.hpp b/src/graphics/slip_stream.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/sp/sp_base.cpp b/src/graphics/sp/sp_base.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/sp/sp_base.hpp b/src/graphics/sp/sp_base.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/sp/sp_dynamic_draw_call.cpp b/src/graphics/sp/sp_dynamic_draw_call.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/sp/sp_dynamic_draw_call.hpp b/src/graphics/sp/sp_dynamic_draw_call.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/sp/sp_instanced_data.hpp b/src/graphics/sp/sp_instanced_data.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/sp/sp_mesh.cpp b/src/graphics/sp/sp_mesh.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/sp/sp_mesh.hpp b/src/graphics/sp/sp_mesh.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/sp/sp_mesh_buffer.cpp b/src/graphics/sp/sp_mesh_buffer.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/sp/sp_mesh_buffer.hpp b/src/graphics/sp/sp_mesh_buffer.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/sp/sp_mesh_node.cpp b/src/graphics/sp/sp_mesh_node.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/sp/sp_mesh_node.hpp b/src/graphics/sp/sp_mesh_node.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/sp/sp_per_object_uniform.cpp b/src/graphics/sp/sp_per_object_uniform.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/sp/sp_per_object_uniform.hpp b/src/graphics/sp/sp_per_object_uniform.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/sp/sp_shader.cpp b/src/graphics/sp/sp_shader.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/sp/sp_shader.hpp b/src/graphics/sp/sp_shader.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/sp/sp_shader_manager.cpp b/src/graphics/sp/sp_shader_manager.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/sp/sp_shader_manager.hpp b/src/graphics/sp/sp_shader_manager.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/sp/sp_texture.cpp b/src/graphics/sp/sp_texture.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/sp/sp_texture.hpp b/src/graphics/sp/sp_texture.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/sp/sp_texture_manager.cpp b/src/graphics/sp/sp_texture_manager.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/sp/sp_texture_manager.hpp b/src/graphics/sp/sp_texture_manager.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/sp/sp_uniform_assigner.hpp b/src/graphics/sp/sp_uniform_assigner.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/sp_mesh_loader.cpp b/src/graphics/sp_mesh_loader.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/sp_mesh_loader.hpp b/src/graphics/sp_mesh_loader.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/spherical_harmonics.cpp b/src/graphics/spherical_harmonics.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/spherical_harmonics.hpp b/src/graphics/spherical_harmonics.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/stars.cpp b/src/graphics/stars.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/stars.hpp b/src/graphics/stars.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/stk_particle.cpp b/src/graphics/stk_particle.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/stk_particle.hpp b/src/graphics/stk_particle.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/stk_tex_manager.cpp b/src/graphics/stk_tex_manager.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/stk_tex_manager.hpp b/src/graphics/stk_tex_manager.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/stk_text_billboard.cpp b/src/graphics/stk_text_billboard.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/stk_text_billboard.hpp b/src/graphics/stk_text_billboard.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/sun.cpp b/src/graphics/sun.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/sun.hpp b/src/graphics/sun.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/text_billboard_drawer.cpp b/src/graphics/text_billboard_drawer.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/text_billboard_drawer.hpp b/src/graphics/text_billboard_drawer.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/texture_shader.cpp b/src/graphics/texture_shader.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/texture_shader.hpp b/src/graphics/texture_shader.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/weather.cpp b/src/graphics/weather.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/weather.hpp b/src/graphics/weather.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/wind.cpp b/src/graphics/wind.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/graphics/wind.hpp b/src/graphics/wind.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/guiengine/CGUISpriteBank.cpp b/src/guiengine/CGUISpriteBank.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/guiengine/CGUISpriteBank.hpp b/src/guiengine/CGUISpriteBank.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/guiengine/abstract_state_manager.cpp b/src/guiengine/abstract_state_manager.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/guiengine/abstract_state_manager.hpp b/src/guiengine/abstract_state_manager.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/guiengine/abstract_top_level_container.cpp b/src/guiengine/abstract_top_level_container.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/guiengine/abstract_top_level_container.hpp b/src/guiengine/abstract_top_level_container.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/guiengine/dialog_queue.cpp b/src/guiengine/dialog_queue.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/guiengine/dialog_queue.hpp b/src/guiengine/dialog_queue.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/guiengine/emoji_keyboard.cpp b/src/guiengine/emoji_keyboard.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/guiengine/emoji_keyboard.hpp b/src/guiengine/emoji_keyboard.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/guiengine/engine.cpp b/src/guiengine/engine.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/guiengine/engine.hpp b/src/guiengine/engine.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/guiengine/event_handler.cpp b/src/guiengine/event_handler.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/guiengine/event_handler.hpp b/src/guiengine/event_handler.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/guiengine/layout_manager.cpp b/src/guiengine/layout_manager.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/guiengine/layout_manager.hpp b/src/guiengine/layout_manager.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/guiengine/message_queue.cpp b/src/guiengine/message_queue.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/guiengine/message_queue.hpp b/src/guiengine/message_queue.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/guiengine/modaldialog.cpp b/src/guiengine/modaldialog.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/guiengine/modaldialog.hpp b/src/guiengine/modaldialog.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/guiengine/scalable_font.cpp b/src/guiengine/scalable_font.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/guiengine/scalable_font.hpp b/src/guiengine/scalable_font.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/guiengine/screen.cpp b/src/guiengine/screen.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/guiengine/screen.hpp b/src/guiengine/screen.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/guiengine/screen_keyboard.cpp b/src/guiengine/screen_keyboard.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/guiengine/screen_keyboard.hpp b/src/guiengine/screen_keyboard.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/guiengine/screen_loader.cpp b/src/guiengine/screen_loader.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/guiengine/skin.cpp b/src/guiengine/skin.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/guiengine/skin.hpp b/src/guiengine/skin.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/guiengine/widget.cpp b/src/guiengine/widget.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/guiengine/widget.hpp b/src/guiengine/widget.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/guiengine/widgets.hpp b/src/guiengine/widgets.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/guiengine/widgets/CGUIEditBox.cpp b/src/guiengine/widgets/CGUIEditBox.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/guiengine/widgets/CGUIEditBox.hpp b/src/guiengine/widgets/CGUIEditBox.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/guiengine/widgets/CGUISTKListBox.cpp b/src/guiengine/widgets/CGUISTKListBox.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/guiengine/widgets/CGUISTKListBox.hpp b/src/guiengine/widgets/CGUISTKListBox.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/guiengine/widgets/bubble_widget.cpp b/src/guiengine/widgets/bubble_widget.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/guiengine/widgets/bubble_widget.hpp b/src/guiengine/widgets/bubble_widget.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/guiengine/widgets/button_widget.cpp b/src/guiengine/widgets/button_widget.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/guiengine/widgets/button_widget.hpp b/src/guiengine/widgets/button_widget.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/guiengine/widgets/check_box_widget.cpp b/src/guiengine/widgets/check_box_widget.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/guiengine/widgets/check_box_widget.hpp b/src/guiengine/widgets/check_box_widget.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/guiengine/widgets/dynamic_ribbon_widget.cpp b/src/guiengine/widgets/dynamic_ribbon_widget.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/guiengine/widgets/dynamic_ribbon_widget.hpp b/src/guiengine/widgets/dynamic_ribbon_widget.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/guiengine/widgets/icon_button_widget.cpp b/src/guiengine/widgets/icon_button_widget.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/guiengine/widgets/icon_button_widget.hpp b/src/guiengine/widgets/icon_button_widget.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/guiengine/widgets/kart_stats_widget.cpp b/src/guiengine/widgets/kart_stats_widget.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/guiengine/widgets/kart_stats_widget.hpp b/src/guiengine/widgets/kart_stats_widget.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/guiengine/widgets/label_widget.cpp b/src/guiengine/widgets/label_widget.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/guiengine/widgets/label_widget.hpp b/src/guiengine/widgets/label_widget.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/guiengine/widgets/list_widget.cpp b/src/guiengine/widgets/list_widget.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/guiengine/widgets/list_widget.hpp b/src/guiengine/widgets/list_widget.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/guiengine/widgets/model_view_widget.cpp b/src/guiengine/widgets/model_view_widget.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/guiengine/widgets/model_view_widget.hpp b/src/guiengine/widgets/model_view_widget.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/guiengine/widgets/player_kart_widget.cpp b/src/guiengine/widgets/player_kart_widget.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/guiengine/widgets/player_kart_widget.hpp b/src/guiengine/widgets/player_kart_widget.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/guiengine/widgets/player_name_spinner.cpp b/src/guiengine/widgets/player_name_spinner.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/guiengine/widgets/player_name_spinner.hpp b/src/guiengine/widgets/player_name_spinner.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/guiengine/widgets/progress_bar_widget.cpp b/src/guiengine/widgets/progress_bar_widget.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/guiengine/widgets/progress_bar_widget.hpp b/src/guiengine/widgets/progress_bar_widget.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/guiengine/widgets/rating_bar_widget.cpp b/src/guiengine/widgets/rating_bar_widget.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/guiengine/widgets/rating_bar_widget.hpp b/src/guiengine/widgets/rating_bar_widget.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/guiengine/widgets/ribbon_widget.cpp b/src/guiengine/widgets/ribbon_widget.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/guiengine/widgets/ribbon_widget.hpp b/src/guiengine/widgets/ribbon_widget.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/guiengine/widgets/skill_level_widget.cpp b/src/guiengine/widgets/skill_level_widget.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/guiengine/widgets/skill_level_widget.hpp b/src/guiengine/widgets/skill_level_widget.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/guiengine/widgets/spinner_widget.cpp b/src/guiengine/widgets/spinner_widget.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/guiengine/widgets/spinner_widget.hpp b/src/guiengine/widgets/spinner_widget.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/guiengine/widgets/text_box_widget.cpp b/src/guiengine/widgets/text_box_widget.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/guiengine/widgets/text_box_widget.hpp b/src/guiengine/widgets/text_box_widget.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/input/binding.cpp b/src/input/binding.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/input/binding.hpp b/src/input/binding.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/input/device_config.cpp b/src/input/device_config.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/input/device_config.hpp b/src/input/device_config.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/input/device_manager.cpp b/src/input/device_manager.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/input/device_manager.hpp b/src/input/device_manager.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/input/gamepad_config.cpp b/src/input/gamepad_config.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/input/gamepad_config.hpp b/src/input/gamepad_config.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/input/gamepad_device.cpp b/src/input/gamepad_device.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/input/gamepad_device.hpp b/src/input/gamepad_device.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/input/input.hpp b/src/input/input.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/input/input_device.cpp b/src/input/input_device.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/input/input_device.hpp b/src/input/input_device.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/input/input_manager.cpp b/src/input/input_manager.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/input/input_manager.hpp b/src/input/input_manager.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/input/keyboard_config.cpp b/src/input/keyboard_config.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/input/keyboard_config.hpp b/src/input/keyboard_config.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/input/keyboard_device.cpp b/src/input/keyboard_device.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/input/keyboard_device.hpp b/src/input/keyboard_device.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/input/multitouch_device.cpp b/src/input/multitouch_device.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/input/multitouch_device.hpp b/src/input/multitouch_device.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/input/sdl_controller.cpp b/src/input/sdl_controller.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/input/sdl_controller.hpp b/src/input/sdl_controller.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/input/wiimote.cpp b/src/input/wiimote.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/input/wiimote.hpp b/src/input/wiimote.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/input/wiimote_manager.cpp b/src/input/wiimote_manager.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/input/wiimote_manager.hpp b/src/input/wiimote_manager.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/io/assets_android.cpp b/src/io/assets_android.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/io/assets_android.hpp b/src/io/assets_android.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/io/file_manager.cpp b/src/io/file_manager.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/io/file_manager.hpp b/src/io/file_manager.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/io/rich_presence.cpp b/src/io/rich_presence.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/io/rich_presence.hpp b/src/io/rich_presence.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/io/utf_writer.cpp b/src/io/utf_writer.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/io/utf_writer.hpp b/src/io/utf_writer.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/io/xml_node.cpp b/src/io/xml_node.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/io/xml_node.hpp b/src/io/xml_node.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/items/attachment.cpp b/src/items/attachment.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/items/attachment.hpp b/src/items/attachment.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/items/attachment_manager.cpp b/src/items/attachment_manager.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/items/attachment_manager.hpp b/src/items/attachment_manager.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/items/attachment_plugin.hpp b/src/items/attachment_plugin.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/items/bowling.cpp b/src/items/bowling.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/items/bowling.hpp b/src/items/bowling.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/items/cake.cpp b/src/items/cake.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/items/cake.hpp b/src/items/cake.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/items/flyable.cpp b/src/items/flyable.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/items/flyable.hpp b/src/items/flyable.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/items/item.cpp b/src/items/item.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/items/item.hpp b/src/items/item.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/items/item_event_info.cpp b/src/items/item_event_info.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/items/item_event_info.hpp b/src/items/item_event_info.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/items/item_manager.cpp b/src/items/item_manager.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/items/item_manager.hpp b/src/items/item_manager.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/items/network_item_manager.cpp b/src/items/network_item_manager.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/items/network_item_manager.hpp b/src/items/network_item_manager.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/items/plunger.cpp b/src/items/plunger.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/items/plunger.hpp b/src/items/plunger.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/items/powerup.cpp b/src/items/powerup.cpp
+old mode 100644
+new mode 100755
+index 65c234f39..176534f4e
+--- a/src/items/powerup.cpp
++++ b/src/items/powerup.cpp
+@@ -62,7 +62,7 @@ Powerup::~Powerup()
+  */
+ void Powerup::reset()
+ {
+-    m_type = PowerupManager::POWERUP_NOTHING;
++    m_type = PowerupManager::POWERUP_ZIPPER;//POWERUP_NOTHING;
+     m_number = 0;
+ 
+     // Ghost kart will update powerup every frame
+@@ -495,7 +495,7 @@ void Powerup::use()
+     if ( m_number <= 0 )
+     {
+         m_number = 0;
+-        m_type   = PowerupManager::POWERUP_NOTHING;
++        m_type   = PowerupManager::POWERUP_ZIPPER;//POWERUP_NOTHING;
+     }
+ }   // use
+ 
+diff --git a/src/items/powerup.hpp b/src/items/powerup.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/items/powerup_manager.cpp b/src/items/powerup_manager.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/items/powerup_manager.hpp b/src/items/powerup_manager.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/items/projectile_manager.cpp b/src/items/projectile_manager.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/items/projectile_manager.hpp b/src/items/projectile_manager.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/items/rubber_ball.cpp b/src/items/rubber_ball.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/items/rubber_ball.hpp b/src/items/rubber_ball.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/items/rubber_band.cpp b/src/items/rubber_band.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/items/rubber_band.hpp b/src/items/rubber_band.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/items/swatter.cpp b/src/items/swatter.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/items/swatter.hpp b/src/items/swatter.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/karts/abstract_characteristic.cpp b/src/karts/abstract_characteristic.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/karts/abstract_characteristic.hpp b/src/karts/abstract_characteristic.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/karts/abstract_kart.cpp b/src/karts/abstract_kart.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/karts/abstract_kart.hpp b/src/karts/abstract_kart.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/karts/abstract_kart_animation.cpp b/src/karts/abstract_kart_animation.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/karts/abstract_kart_animation.hpp b/src/karts/abstract_kart_animation.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/karts/cached_characteristic.cpp b/src/karts/cached_characteristic.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/karts/cached_characteristic.hpp b/src/karts/cached_characteristic.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/karts/cannon_animation.cpp b/src/karts/cannon_animation.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/karts/cannon_animation.hpp b/src/karts/cannon_animation.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/karts/combined_characteristic.cpp b/src/karts/combined_characteristic.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/karts/combined_characteristic.hpp b/src/karts/combined_characteristic.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/karts/controller/ai_base_controller.cpp b/src/karts/controller/ai_base_controller.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/karts/controller/ai_base_controller.hpp b/src/karts/controller/ai_base_controller.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/karts/controller/ai_base_lap_controller.cpp b/src/karts/controller/ai_base_lap_controller.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/karts/controller/ai_base_lap_controller.hpp b/src/karts/controller/ai_base_lap_controller.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/karts/controller/ai_properties.cpp b/src/karts/controller/ai_properties.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/karts/controller/ai_properties.hpp b/src/karts/controller/ai_properties.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/karts/controller/arena_ai.cpp b/src/karts/controller/arena_ai.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/karts/controller/arena_ai.hpp b/src/karts/controller/arena_ai.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/karts/controller/battle_ai.cpp b/src/karts/controller/battle_ai.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/karts/controller/battle_ai.hpp b/src/karts/controller/battle_ai.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/karts/controller/controller.cpp b/src/karts/controller/controller.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/karts/controller/controller.hpp b/src/karts/controller/controller.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/karts/controller/end_controller.cpp b/src/karts/controller/end_controller.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/karts/controller/end_controller.hpp b/src/karts/controller/end_controller.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/karts/controller/ghost_controller.cpp b/src/karts/controller/ghost_controller.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/karts/controller/ghost_controller.hpp b/src/karts/controller/ghost_controller.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/karts/controller/kart_control.cpp b/src/karts/controller/kart_control.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/karts/controller/kart_control.hpp b/src/karts/controller/kart_control.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/karts/controller/local_player_controller.cpp b/src/karts/controller/local_player_controller.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/karts/controller/local_player_controller.hpp b/src/karts/controller/local_player_controller.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/karts/controller/network_ai_controller.cpp b/src/karts/controller/network_ai_controller.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/karts/controller/network_ai_controller.hpp b/src/karts/controller/network_ai_controller.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/karts/controller/network_player_controller.hpp b/src/karts/controller/network_player_controller.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/karts/controller/player_controller.cpp b/src/karts/controller/player_controller.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/karts/controller/player_controller.hpp b/src/karts/controller/player_controller.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/karts/controller/skidding_ai.cpp b/src/karts/controller/skidding_ai.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/karts/controller/skidding_ai.hpp b/src/karts/controller/skidding_ai.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/karts/controller/soccer_ai.cpp b/src/karts/controller/soccer_ai.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/karts/controller/soccer_ai.hpp b/src/karts/controller/soccer_ai.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/karts/controller/spare_tire_ai.cpp b/src/karts/controller/spare_tire_ai.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/karts/controller/spare_tire_ai.hpp b/src/karts/controller/spare_tire_ai.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/karts/controller/test_ai.cpp b/src/karts/controller/test_ai.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/karts/controller/test_ai.hpp b/src/karts/controller/test_ai.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/karts/explosion_animation.cpp b/src/karts/explosion_animation.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/karts/explosion_animation.hpp b/src/karts/explosion_animation.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/karts/ghost_kart.cpp b/src/karts/ghost_kart.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/karts/ghost_kart.hpp b/src/karts/ghost_kart.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/karts/kart.cpp b/src/karts/kart.cpp
+old mode 100644
+new mode 100755
+index aef467d75..fd5a98436
+--- a/src/karts/kart.cpp
++++ b/src/karts/kart.cpp
+@@ -373,7 +373,7 @@ void Kart::reset()
+     m_invulnerable_ticks   = 0;
+     m_min_nitro_ticks      = 0;
+     m_energy_to_min_ratio  = 0;
+-    m_collected_energy     = 0;
++    m_collected_energy     = 1;
+     m_bounce_back_ticks    = 0;
+     m_brake_ticks          = 0;
+     m_ticks_last_crash     = 0;
+@@ -1597,11 +1597,11 @@ void Kart::update(int ticks)
+         const float roll = quad_normal.angle
+                ((Vec3(0, 1, 0).rotate(q.getAxis(), q.getAngle())));
+ 
+-        if (Track::getCurrentTrack()->isAutoRescueEnabled() &&
++        if (/*Track::getCurrentTrack()->isAutoRescueEnabled() &&
+             (!m_terrain_info->getMaterial() ||
+             !m_terrain_info->getMaterial()->hasGravity()) &&
+             !has_animation_before && fabs(roll) > 60 * DEGREE_TO_RAD &&
+-            fabs(getSpeed()) < 3.0f)
++            fabs(getSpeed()) < 3.0f*/false)
+         {
+             RescueAnimation::create(this, /*is_auto_rescue*/true);
+             m_last_factor_engine_sound = 0.0f;
+@@ -1691,8 +1691,8 @@ void Kart::update(int ticks)
+         const Vec3 *min, *max;
+         Track::getCurrentTrack()->getAABB(&min, &max);
+ 
+-        if((min->getY() - getXYZ().getY() > 17 || dist_to_sector > 25) && !m_flying &&
+-           !has_animation_before)
++        if(/*(min->getY() - getXYZ().getY() > 17 || dist_to_sector > 25) && !m_flying &&
++           !has_animation_before*/false)
+         {
+             RescueAnimation::create(this);
+             m_last_factor_engine_sound = 0.0f;
+@@ -1700,7 +1700,7 @@ void Kart::update(int ticks)
+     }
+     else
+     {
+-        if (!has_animation_before && material->isDriveReset() && isOnGround())
++        if (false && !has_animation_before && material->isDriveReset() && isOnGround())
+         {
+             RescueAnimation::create(this);
+             m_last_factor_engine_sound = 0.0f;
+@@ -2195,7 +2195,7 @@ void Kart::handleZipper(const Material *material, bool play_sound)
+         if(duration<0)
+             duration           = m_kart_properties->getZipperDuration();
+         if(speed_gain<0)
+-            speed_gain         = m_kart_properties->getZipperSpeedGain();
++            speed_gain         = m_kart_properties->getZipperSpeedGain()*16;
+         if(fade_out_time<0)
+             fade_out_time      = m_kart_properties->getZipperFadeOutTime();
+         if(engine_force<0)
+@@ -2433,7 +2433,7 @@ void Kart::crashed(const Material *m, const Vec3 &normal)
+             }
+         }
+ #endif
+-        if (m->getCollisionReaction() == Material::RESCUE)
++        if (false && m->getCollisionReaction() == Material::RESCUE)
+         {
+             RescueAnimation::create(this);
+             m_last_factor_engine_sound = 0.0f;
+diff --git a/src/karts/kart.hpp b/src/karts/kart.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/karts/kart_gfx.cpp b/src/karts/kart_gfx.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/karts/kart_gfx.hpp b/src/karts/kart_gfx.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/karts/kart_model.cpp b/src/karts/kart_model.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/karts/kart_model.hpp b/src/karts/kart_model.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/karts/kart_properties.cpp b/src/karts/kart_properties.cpp
+old mode 100644
+new mode 100755
+index d7c1a68eb..d8ee50740
+--- a/src/karts/kart_properties.cpp
++++ b/src/karts/kart_properties.cpp
+@@ -1150,19 +1150,19 @@ float KartProperties::getNitroDuration() const
+ // ----------------------------------------------------------------------------
+ float KartProperties::getNitroEngineForce() const
+ {
+-    return m_cached_characteristic->getNitroEngineForce();
++    return m_cached_characteristic->getNitroEngineForce()*2;
+ }  // getNitroEngineForce
+ 
+ // ----------------------------------------------------------------------------
+ float KartProperties::getNitroEngineMult() const
+ {
+-    return m_cached_characteristic->getNitroEngineMult();
++    return m_cached_characteristic->getNitroEngineMult()*2;
+ }  // getNitroEngineMult
+ 
+ // ----------------------------------------------------------------------------
+ float KartProperties::getNitroConsumption() const
+ {
+-    return m_cached_characteristic->getNitroConsumption();
++    return m_cached_characteristic->getNitroConsumption()*0;
+ }  // getNitroConsumption
+ 
+ // ----------------------------------------------------------------------------
+@@ -1192,7 +1192,7 @@ float KartProperties::getNitroFadeOutTime() const
+ // ----------------------------------------------------------------------------
+ float KartProperties::getNitroMax() const
+ {
+-    return m_cached_characteristic->getNitroMax();
++    return m_cached_characteristic->getNitroMax()*64;
+ }  // getNitroMax
+ 
+ // ----------------------------------------------------------------------------
+diff --git a/src/karts/kart_properties.hpp b/src/karts/kart_properties.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/karts/kart_properties_manager.cpp b/src/karts/kart_properties_manager.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/karts/kart_properties_manager.hpp b/src/karts/kart_properties_manager.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/karts/kart_rewinder.cpp b/src/karts/kart_rewinder.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/karts/kart_rewinder.hpp b/src/karts/kart_rewinder.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/karts/kart_with_stats.cpp b/src/karts/kart_with_stats.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/karts/kart_with_stats.hpp b/src/karts/kart_with_stats.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/karts/max_speed.cpp b/src/karts/max_speed.cpp
+old mode 100644
+new mode 100755
+index f586a84cb..21c72661d
+--- a/src/karts/max_speed.cpp
++++ b/src/karts/max_speed.cpp
+@@ -55,7 +55,7 @@ MaxSpeed::MaxSpeed(AbstractKart *kart)
+     // update() is called.
+     m_add_engine_force  = 0;
+     // This can be used if command line option -N is used
+-    m_current_max_speed = 0;
++    m_current_max_speed = 340282346638528859811704183484516925440.0f;//0;
+ }   // MaxSpeed
+ 
+ // ----------------------------------------------------------------------------
+@@ -65,7 +65,7 @@ MaxSpeed::MaxSpeed(AbstractKart *kart)
+  */
+ void MaxSpeed::reset()
+ {
+-    m_current_max_speed = m_kart->getKartProperties()->getEngineMaxSpeed();
++    m_current_max_speed = 340282346638528859811704183484516925440.0f;//m_kart->getKartProperties()->getEngineMaxSpeed();
+     m_min_speed         = -1.0f;
+ 
+     for(unsigned int i=MS_DECREASE_MIN; i<MS_DECREASE_MAX; i++)
+@@ -414,7 +414,7 @@ void MaxSpeed::update(int ticks)
+     }
+ 
+     m_add_engine_force  = 0;
+-    m_current_max_speed = m_kart->getKartProperties()->getEngineMaxSpeed();
++    m_current_max_speed = 340282346638528859811704183484516925440.0f;//_kart->getKartProperties()->getEngineMaxSpeed();
+ 
+     // Then add the speed increase from each category
+     // ----------------------------------------------
+diff --git a/src/karts/max_speed.hpp b/src/karts/max_speed.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/karts/moveable.cpp b/src/karts/moveable.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/karts/moveable.hpp b/src/karts/moveable.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/karts/official_karts.cpp b/src/karts/official_karts.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/karts/official_karts.hpp b/src/karts/official_karts.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/karts/rescue_animation.cpp b/src/karts/rescue_animation.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/karts/rescue_animation.hpp b/src/karts/rescue_animation.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/karts/skidding.cpp b/src/karts/skidding.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/karts/skidding.hpp b/src/karts/skidding.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/karts/xml_characteristic.cpp b/src/karts/xml_characteristic.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/karts/xml_characteristic.hpp b/src/karts/xml_characteristic.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/main.cpp b/src/main.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/main_android.cpp b/src/main_android.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/main_loop.cpp b/src/main_loop.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/main_loop.hpp b/src/main_loop.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/modes/capture_the_flag.cpp b/src/modes/capture_the_flag.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/modes/capture_the_flag.hpp b/src/modes/capture_the_flag.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/modes/ctf_flag.cpp b/src/modes/ctf_flag.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/modes/ctf_flag.hpp b/src/modes/ctf_flag.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/modes/cutscene_world.cpp b/src/modes/cutscene_world.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/modes/cutscene_world.hpp b/src/modes/cutscene_world.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/modes/demo_world.cpp b/src/modes/demo_world.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/modes/demo_world.hpp b/src/modes/demo_world.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/modes/easter_egg_hunt.cpp b/src/modes/easter_egg_hunt.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/modes/easter_egg_hunt.hpp b/src/modes/easter_egg_hunt.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/modes/follow_the_leader.cpp b/src/modes/follow_the_leader.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/modes/follow_the_leader.hpp b/src/modes/follow_the_leader.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/modes/free_for_all.cpp b/src/modes/free_for_all.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/modes/free_for_all.hpp b/src/modes/free_for_all.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/modes/lap_trial.cpp b/src/modes/lap_trial.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/modes/lap_trial.hpp b/src/modes/lap_trial.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/modes/linear_world.cpp b/src/modes/linear_world.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/modes/linear_world.hpp b/src/modes/linear_world.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/modes/overworld.cpp b/src/modes/overworld.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/modes/overworld.hpp b/src/modes/overworld.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/modes/profile_world.cpp b/src/modes/profile_world.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/modes/profile_world.hpp b/src/modes/profile_world.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/modes/soccer_world.cpp b/src/modes/soccer_world.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/modes/soccer_world.hpp b/src/modes/soccer_world.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/modes/standard_race.cpp b/src/modes/standard_race.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/modes/standard_race.hpp b/src/modes/standard_race.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/modes/three_strikes_battle.cpp b/src/modes/three_strikes_battle.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/modes/three_strikes_battle.hpp b/src/modes/three_strikes_battle.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/modes/tutorial_world.cpp b/src/modes/tutorial_world.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/modes/tutorial_world.hpp b/src/modes/tutorial_world.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/modes/world.cpp b/src/modes/world.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/modes/world.hpp b/src/modes/world.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/modes/world_status.cpp b/src/modes/world_status.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/modes/world_status.hpp b/src/modes/world_status.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/modes/world_with_rank.cpp b/src/modes/world_with_rank.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/modes/world_with_rank.hpp b/src/modes/world_with_rank.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/child_loop.cpp b/src/network/child_loop.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/child_loop.hpp b/src/network/child_loop.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/compress_network_body.hpp b/src/network/compress_network_body.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/crypto.hpp b/src/network/crypto.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/crypto_mbedtls.cpp b/src/network/crypto_mbedtls.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/crypto_mbedtls.hpp b/src/network/crypto_mbedtls.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/crypto_openssl.cpp b/src/network/crypto_openssl.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/crypto_openssl.hpp b/src/network/crypto_openssl.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/dummy_rewinder.hpp b/src/network/dummy_rewinder.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/event.cpp b/src/network/event.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/event.hpp b/src/network/event.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/event_rewinder.cpp b/src/network/event_rewinder.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/event_rewinder.hpp b/src/network/event_rewinder.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/game_setup.cpp b/src/network/game_setup.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/game_setup.hpp b/src/network/game_setup.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/kart_data.cpp b/src/network/kart_data.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/kart_data.hpp b/src/network/kart_data.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/network.cpp b/src/network/network.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/network.hpp b/src/network/network.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/network_config.cpp b/src/network/network_config.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/network_config.hpp b/src/network/network_config.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/network_console.cpp b/src/network/network_console.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/network_console.hpp b/src/network/network_console.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/network_player_profile.cpp b/src/network/network_player_profile.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/network_player_profile.hpp b/src/network/network_player_profile.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/network_string.cpp b/src/network/network_string.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/network_string.hpp b/src/network/network_string.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/network_timer_synchronizer.hpp b/src/network/network_timer_synchronizer.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/peer_vote.hpp b/src/network/peer_vote.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/protocol.cpp b/src/network/protocol.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/protocol.hpp b/src/network/protocol.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/protocol_manager.cpp b/src/network/protocol_manager.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/protocol_manager.hpp b/src/network/protocol_manager.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/protocols/client_lobby.cpp b/src/network/protocols/client_lobby.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/protocols/client_lobby.hpp b/src/network/protocols/client_lobby.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/protocols/connect_to_peer.cpp b/src/network/protocols/connect_to_peer.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/protocols/connect_to_peer.hpp b/src/network/protocols/connect_to_peer.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/protocols/connect_to_server.cpp b/src/network/protocols/connect_to_server.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/protocols/connect_to_server.hpp b/src/network/protocols/connect_to_server.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/protocols/game_events_protocol.cpp b/src/network/protocols/game_events_protocol.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/protocols/game_events_protocol.hpp b/src/network/protocols/game_events_protocol.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/protocols/game_protocol.cpp b/src/network/protocols/game_protocol.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/protocols/game_protocol.hpp b/src/network/protocols/game_protocol.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/protocols/lobby_protocol.cpp b/src/network/protocols/lobby_protocol.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/protocols/lobby_protocol.hpp b/src/network/protocols/lobby_protocol.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/protocols/server_lobby.cpp b/src/network/protocols/server_lobby.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/protocols/server_lobby.hpp b/src/network/protocols/server_lobby.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/race_event_manager.cpp b/src/network/race_event_manager.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/race_event_manager.hpp b/src/network/race_event_manager.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/remote_kart_info.cpp b/src/network/remote_kart_info.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/remote_kart_info.hpp b/src/network/remote_kart_info.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/rewind_info.cpp b/src/network/rewind_info.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/rewind_info.hpp b/src/network/rewind_info.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/rewind_manager.cpp b/src/network/rewind_manager.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/rewind_manager.hpp b/src/network/rewind_manager.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/rewind_queue.cpp b/src/network/rewind_queue.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/rewind_queue.hpp b/src/network/rewind_queue.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/rewinder.cpp b/src/network/rewinder.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/rewinder.hpp b/src/network/rewinder.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/server.cpp b/src/network/server.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/server.hpp b/src/network/server.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/server_config.cpp b/src/network/server_config.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/server_config.hpp b/src/network/server_config.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/servers_manager.cpp b/src/network/servers_manager.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/servers_manager.hpp b/src/network/servers_manager.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/smooth_network_body.cpp b/src/network/smooth_network_body.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/smooth_network_body.hpp b/src/network/smooth_network_body.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/socket_address.cpp b/src/network/socket_address.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/socket_address.hpp b/src/network/socket_address.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/stk_host.cpp b/src/network/stk_host.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/stk_host.hpp b/src/network/stk_host.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/stk_ipv6.cpp b/src/network/stk_ipv6.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/stk_ipv6.hpp b/src/network/stk_ipv6.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/stk_peer.cpp b/src/network/stk_peer.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/stk_peer.hpp b/src/network/stk_peer.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/network/stun_detection.hpp b/src/network/stun_detection.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/online/http_request.cpp b/src/online/http_request.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/online/http_request.hpp b/src/online/http_request.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/online/link_helper.cpp b/src/online/link_helper.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/online/link_helper.hpp b/src/online/link_helper.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/online/online_player_profile.cpp b/src/online/online_player_profile.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/online/online_player_profile.hpp b/src/online/online_player_profile.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/online/online_profile.cpp b/src/online/online_profile.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/online/online_profile.hpp b/src/online/online_profile.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/online/profile_manager.cpp b/src/online/profile_manager.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/online/profile_manager.hpp b/src/online/profile_manager.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/online/request.cpp b/src/online/request.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/online/request.hpp b/src/online/request.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/online/request_manager.cpp b/src/online/request_manager.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/online/request_manager.hpp b/src/online/request_manager.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/online/xml_request.cpp b/src/online/xml_request.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/online/xml_request.hpp b/src/online/xml_request.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/physics/btKart.cpp b/src/physics/btKart.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/physics/btKart.hpp b/src/physics/btKart.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/physics/btKartRaycast.cpp b/src/physics/btKartRaycast.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/physics/btKartRaycast.hpp b/src/physics/btKartRaycast.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/physics/irr_debug_drawer.cpp b/src/physics/irr_debug_drawer.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/physics/irr_debug_drawer.hpp b/src/physics/irr_debug_drawer.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/physics/kart_motion_state.hpp b/src/physics/kart_motion_state.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/physics/physical_object.cpp b/src/physics/physical_object.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/physics/physical_object.hpp b/src/physics/physical_object.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/physics/physics.cpp b/src/physics/physics.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/physics/physics.hpp b/src/physics/physics.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/physics/stk_dynamics_world.hpp b/src/physics/stk_dynamics_world.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/physics/triangle_mesh.cpp b/src/physics/triangle_mesh.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/physics/triangle_mesh.hpp b/src/physics/triangle_mesh.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/physics/user_pointer.hpp b/src/physics/user_pointer.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/race/grand_prix_data.cpp b/src/race/grand_prix_data.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/race/grand_prix_data.hpp b/src/race/grand_prix_data.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/race/grand_prix_manager.cpp b/src/race/grand_prix_manager.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/race/grand_prix_manager.hpp b/src/race/grand_prix_manager.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/race/highscore_manager.cpp b/src/race/highscore_manager.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/race/highscore_manager.hpp b/src/race/highscore_manager.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/race/highscores.cpp b/src/race/highscores.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/race/highscores.hpp b/src/race/highscores.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/race/history.cpp b/src/race/history.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/race/history.hpp b/src/race/history.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/race/race_manager.cpp b/src/race/race_manager.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/race/race_manager.hpp b/src/race/race_manager.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/replay/replay_base.cpp b/src/replay/replay_base.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/replay/replay_base.hpp b/src/replay/replay_base.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/replay/replay_play.cpp b/src/replay/replay_play.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/replay/replay_play.hpp b/src/replay/replay_play.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/replay/replay_recorder.cpp b/src/replay/replay_recorder.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/replay/replay_recorder.hpp b/src/replay/replay_recorder.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/scriptengine/aswrappedcall.hpp b/src/scriptengine/aswrappedcall.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/scriptengine/property_animator.cpp b/src/scriptengine/property_animator.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/scriptengine/property_animator.hpp b/src/scriptengine/property_animator.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/scriptengine/script_audio.cpp b/src/scriptengine/script_audio.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/scriptengine/script_audio.hpp b/src/scriptengine/script_audio.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/scriptengine/script_challenges.cpp b/src/scriptengine/script_challenges.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/scriptengine/script_challenges.hpp b/src/scriptengine/script_challenges.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/scriptengine/script_engine.cpp b/src/scriptengine/script_engine.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/scriptengine/script_engine.hpp b/src/scriptengine/script_engine.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/scriptengine/script_gui.cpp b/src/scriptengine/script_gui.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/scriptengine/script_gui.hpp b/src/scriptengine/script_gui.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/scriptengine/script_kart.cpp b/src/scriptengine/script_kart.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/scriptengine/script_kart.hpp b/src/scriptengine/script_kart.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/scriptengine/script_physics.cpp b/src/scriptengine/script_physics.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/scriptengine/script_physics.hpp b/src/scriptengine/script_physics.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/scriptengine/script_track.cpp b/src/scriptengine/script_track.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/scriptengine/script_track.hpp b/src/scriptengine/script_track.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/scriptengine/script_utils.cpp b/src/scriptengine/script_utils.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/scriptengine/script_utils.hpp b/src/scriptengine/script_utils.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/scriptengine/scriptarray.cpp b/src/scriptengine/scriptarray.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/scriptengine/scriptarray.hpp b/src/scriptengine/scriptarray.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/scriptengine/scriptstdstring.cpp b/src/scriptengine/scriptstdstring.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/scriptengine/scriptstdstring.hpp b/src/scriptengine/scriptstdstring.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/scriptengine/scriptstdstring_utils.cpp b/src/scriptengine/scriptstdstring_utils.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/scriptengine/scriptvec3.cpp b/src/scriptengine/scriptvec3.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/scriptengine/scriptvec3.hpp b/src/scriptengine/scriptvec3.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/addons_screen.cpp b/src/states_screens/addons_screen.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/addons_screen.hpp b/src/states_screens/addons_screen.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/arenas_screen.cpp b/src/states_screens/arenas_screen.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/arenas_screen.hpp b/src/states_screens/arenas_screen.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/credits.cpp b/src/states_screens/credits.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/credits.hpp b/src/states_screens/credits.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/cutscene_general.cpp b/src/states_screens/cutscene_general.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/cutscene_general.hpp b/src/states_screens/cutscene_general.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/cutscene_gui.cpp b/src/states_screens/cutscene_gui.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/cutscene_gui.hpp b/src/states_screens/cutscene_gui.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/dialogs/achievement_progress_dialog.cpp b/src/states_screens/dialogs/achievement_progress_dialog.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/dialogs/achievement_progress_dialog.hpp b/src/states_screens/dialogs/achievement_progress_dialog.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/dialogs/add_device_dialog.cpp b/src/states_screens/dialogs/add_device_dialog.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/dialogs/add_device_dialog.hpp b/src/states_screens/dialogs/add_device_dialog.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/dialogs/addons_loading.cpp b/src/states_screens/dialogs/addons_loading.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/dialogs/addons_loading.hpp b/src/states_screens/dialogs/addons_loading.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/dialogs/addons_pack.cpp b/src/states_screens/dialogs/addons_pack.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/dialogs/addons_pack.hpp b/src/states_screens/dialogs/addons_pack.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/dialogs/change_password_dialog.cpp b/src/states_screens/dialogs/change_password_dialog.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/dialogs/change_password_dialog.hpp b/src/states_screens/dialogs/change_password_dialog.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/dialogs/confirm_resolution_dialog.cpp b/src/states_screens/dialogs/confirm_resolution_dialog.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/dialogs/confirm_resolution_dialog.hpp b/src/states_screens/dialogs/confirm_resolution_dialog.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/dialogs/custom_camera_settings.cpp b/src/states_screens/dialogs/custom_camera_settings.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/dialogs/custom_camera_settings.hpp b/src/states_screens/dialogs/custom_camera_settings.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/dialogs/custom_video_settings.cpp b/src/states_screens/dialogs/custom_video_settings.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/dialogs/custom_video_settings.hpp b/src/states_screens/dialogs/custom_video_settings.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/dialogs/debug_slider.cpp b/src/states_screens/dialogs/debug_slider.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/dialogs/debug_slider.hpp b/src/states_screens/dialogs/debug_slider.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/dialogs/download_assets.cpp b/src/states_screens/dialogs/download_assets.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/dialogs/download_assets.hpp b/src/states_screens/dialogs/download_assets.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/dialogs/enter_address_dialog.cpp b/src/states_screens/dialogs/enter_address_dialog.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/dialogs/enter_address_dialog.hpp b/src/states_screens/dialogs/enter_address_dialog.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/dialogs/general_text_field_dialog.cpp b/src/states_screens/dialogs/general_text_field_dialog.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/dialogs/general_text_field_dialog.hpp b/src/states_screens/dialogs/general_text_field_dialog.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/dialogs/ghost_replay_info_dialog.cpp b/src/states_screens/dialogs/ghost_replay_info_dialog.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/dialogs/ghost_replay_info_dialog.hpp b/src/states_screens/dialogs/ghost_replay_info_dialog.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/dialogs/high_score_info_dialog.cpp b/src/states_screens/dialogs/high_score_info_dialog.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/dialogs/high_score_info_dialog.hpp b/src/states_screens/dialogs/high_score_info_dialog.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/dialogs/init_android_dialog.cpp b/src/states_screens/dialogs/init_android_dialog.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/dialogs/init_android_dialog.hpp b/src/states_screens/dialogs/init_android_dialog.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/dialogs/kart_color_slider_dialog.cpp b/src/states_screens/dialogs/kart_color_slider_dialog.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/dialogs/kart_color_slider_dialog.hpp b/src/states_screens/dialogs/kart_color_slider_dialog.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/dialogs/message_dialog.cpp b/src/states_screens/dialogs/message_dialog.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/dialogs/message_dialog.hpp b/src/states_screens/dialogs/message_dialog.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/dialogs/multitouch_settings_dialog.cpp b/src/states_screens/dialogs/multitouch_settings_dialog.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/dialogs/multitouch_settings_dialog.hpp b/src/states_screens/dialogs/multitouch_settings_dialog.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/dialogs/network_player_dialog.cpp b/src/states_screens/dialogs/network_player_dialog.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/dialogs/network_player_dialog.hpp b/src/states_screens/dialogs/network_player_dialog.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/dialogs/player_rankings_dialog.cpp b/src/states_screens/dialogs/player_rankings_dialog.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/dialogs/player_rankings_dialog.hpp b/src/states_screens/dialogs/player_rankings_dialog.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/dialogs/press_a_key_dialog.cpp b/src/states_screens/dialogs/press_a_key_dialog.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/dialogs/press_a_key_dialog.hpp b/src/states_screens/dialogs/press_a_key_dialog.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/dialogs/race_paused_dialog.cpp b/src/states_screens/dialogs/race_paused_dialog.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/dialogs/race_paused_dialog.hpp b/src/states_screens/dialogs/race_paused_dialog.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/dialogs/ranking_callback.hpp b/src/states_screens/dialogs/ranking_callback.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/dialogs/recovery_dialog.cpp b/src/states_screens/dialogs/recovery_dialog.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/dialogs/recovery_dialog.hpp b/src/states_screens/dialogs/recovery_dialog.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/dialogs/registration_dialog.cpp b/src/states_screens/dialogs/registration_dialog.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/dialogs/registration_dialog.hpp b/src/states_screens/dialogs/registration_dialog.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/dialogs/select_challenge.cpp b/src/states_screens/dialogs/select_challenge.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/dialogs/select_challenge.hpp b/src/states_screens/dialogs/select_challenge.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/dialogs/server_configuration_dialog.cpp b/src/states_screens/dialogs/server_configuration_dialog.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/dialogs/server_configuration_dialog.hpp b/src/states_screens/dialogs/server_configuration_dialog.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/dialogs/server_info_dialog.cpp b/src/states_screens/dialogs/server_info_dialog.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/dialogs/server_info_dialog.hpp b/src/states_screens/dialogs/server_info_dialog.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/dialogs/splitscreen_player_dialog.cpp b/src/states_screens/dialogs/splitscreen_player_dialog.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/dialogs/splitscreen_player_dialog.hpp b/src/states_screens/dialogs/splitscreen_player_dialog.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/dialogs/tutorial_message_dialog.cpp b/src/states_screens/dialogs/tutorial_message_dialog.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/dialogs/tutorial_message_dialog.hpp b/src/states_screens/dialogs/tutorial_message_dialog.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/dialogs/user_info_dialog.cpp b/src/states_screens/dialogs/user_info_dialog.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/dialogs/user_info_dialog.hpp b/src/states_screens/dialogs/user_info_dialog.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/dialogs/vote_dialog.cpp b/src/states_screens/dialogs/vote_dialog.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/dialogs/vote_dialog.hpp b/src/states_screens/dialogs/vote_dialog.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/easter_egg_screen.cpp b/src/states_screens/easter_egg_screen.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/easter_egg_screen.hpp b/src/states_screens/easter_egg_screen.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/edit_gp_screen.cpp b/src/states_screens/edit_gp_screen.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/edit_gp_screen.hpp b/src/states_screens/edit_gp_screen.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/edit_track_screen.cpp b/src/states_screens/edit_track_screen.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/edit_track_screen.hpp b/src/states_screens/edit_track_screen.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/feature_unlocked.cpp b/src/states_screens/feature_unlocked.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/feature_unlocked.hpp b/src/states_screens/feature_unlocked.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/ghost_replay_selection.cpp b/src/states_screens/ghost_replay_selection.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/ghost_replay_selection.hpp b/src/states_screens/ghost_replay_selection.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/gp_info_screen.cpp b/src/states_screens/gp_info_screen.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/gp_info_screen.hpp b/src/states_screens/gp_info_screen.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/grand_prix_cutscene.cpp b/src/states_screens/grand_prix_cutscene.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/grand_prix_cutscene.hpp b/src/states_screens/grand_prix_cutscene.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/grand_prix_editor_screen.cpp b/src/states_screens/grand_prix_editor_screen.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/grand_prix_editor_screen.hpp b/src/states_screens/grand_prix_editor_screen.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/grand_prix_lose.cpp b/src/states_screens/grand_prix_lose.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/grand_prix_lose.hpp b/src/states_screens/grand_prix_lose.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/grand_prix_win.cpp b/src/states_screens/grand_prix_win.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/grand_prix_win.hpp b/src/states_screens/grand_prix_win.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/help_screen_1.cpp b/src/states_screens/help_screen_1.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/help_screen_1.hpp b/src/states_screens/help_screen_1.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/help_screen_2.cpp b/src/states_screens/help_screen_2.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/help_screen_2.hpp b/src/states_screens/help_screen_2.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/help_screen_3.cpp b/src/states_screens/help_screen_3.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/help_screen_3.hpp b/src/states_screens/help_screen_3.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/help_screen_4.cpp b/src/states_screens/help_screen_4.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/help_screen_4.hpp b/src/states_screens/help_screen_4.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/help_screen_5.cpp b/src/states_screens/help_screen_5.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/help_screen_5.hpp b/src/states_screens/help_screen_5.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/help_screen_6.cpp b/src/states_screens/help_screen_6.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/help_screen_6.hpp b/src/states_screens/help_screen_6.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/help_screen_7.cpp b/src/states_screens/help_screen_7.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/help_screen_7.hpp b/src/states_screens/help_screen_7.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/high_score_selection.cpp b/src/states_screens/high_score_selection.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/high_score_selection.hpp b/src/states_screens/high_score_selection.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/kart_selection.cpp b/src/states_screens/kart_selection.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/kart_selection.hpp b/src/states_screens/kart_selection.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/main_menu_screen.cpp b/src/states_screens/main_menu_screen.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/main_menu_screen.hpp b/src/states_screens/main_menu_screen.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/offline_kart_selection.cpp b/src/states_screens/offline_kart_selection.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/offline_kart_selection.hpp b/src/states_screens/offline_kart_selection.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/online/create_server_screen.cpp b/src/states_screens/online/create_server_screen.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/online/create_server_screen.hpp b/src/states_screens/online/create_server_screen.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/online/network_kart_selection.cpp b/src/states_screens/online/network_kart_selection.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/online/network_kart_selection.hpp b/src/states_screens/online/network_kart_selection.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/online/networking_lobby.cpp b/src/states_screens/online/networking_lobby.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/online/networking_lobby.hpp b/src/states_screens/online/networking_lobby.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/online/online_lan.cpp b/src/states_screens/online/online_lan.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/online/online_lan.hpp b/src/states_screens/online/online_lan.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/online/online_profile_achievements.cpp b/src/states_screens/online/online_profile_achievements.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/online/online_profile_achievements.hpp b/src/states_screens/online/online_profile_achievements.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/online/online_profile_base.cpp b/src/states_screens/online/online_profile_base.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/online/online_profile_base.hpp b/src/states_screens/online/online_profile_base.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/online/online_profile_friends.cpp b/src/states_screens/online/online_profile_friends.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/online/online_profile_friends.hpp b/src/states_screens/online/online_profile_friends.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/online/online_profile_servers.cpp b/src/states_screens/online/online_profile_servers.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/online/online_profile_servers.hpp b/src/states_screens/online/online_profile_servers.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/online/online_profile_settings.cpp b/src/states_screens/online/online_profile_settings.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/online/online_profile_settings.hpp b/src/states_screens/online/online_profile_settings.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/online/online_screen.cpp b/src/states_screens/online/online_screen.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/online/online_screen.hpp b/src/states_screens/online/online_screen.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/online/online_user_search.cpp b/src/states_screens/online/online_user_search.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/online/online_user_search.hpp b/src/states_screens/online/online_user_search.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/online/register_screen.cpp b/src/states_screens/online/register_screen.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/online/register_screen.hpp b/src/states_screens/online/register_screen.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/online/server_selection.cpp b/src/states_screens/online/server_selection.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/online/server_selection.hpp b/src/states_screens/online/server_selection.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/online/tracks_screen.cpp b/src/states_screens/online/tracks_screen.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/online/tracks_screen.hpp b/src/states_screens/online/tracks_screen.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/options/options_screen_audio.cpp b/src/states_screens/options/options_screen_audio.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/options/options_screen_audio.hpp b/src/states_screens/options/options_screen_audio.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/options/options_screen_device.cpp b/src/states_screens/options/options_screen_device.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/options/options_screen_device.hpp b/src/states_screens/options/options_screen_device.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/options/options_screen_general.cpp b/src/states_screens/options/options_screen_general.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/options/options_screen_general.hpp b/src/states_screens/options/options_screen_general.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/options/options_screen_input.cpp b/src/states_screens/options/options_screen_input.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/options/options_screen_input.hpp b/src/states_screens/options/options_screen_input.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/options/options_screen_language.cpp b/src/states_screens/options/options_screen_language.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/options/options_screen_language.hpp b/src/states_screens/options/options_screen_language.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/options/options_screen_ui.cpp b/src/states_screens/options/options_screen_ui.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/options/options_screen_ui.hpp b/src/states_screens/options/options_screen_ui.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/options/options_screen_video.cpp b/src/states_screens/options/options_screen_video.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/options/options_screen_video.hpp b/src/states_screens/options/options_screen_video.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/options/user_screen.cpp b/src/states_screens/options/user_screen.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/options/user_screen.hpp b/src/states_screens/options/user_screen.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/race_gui.cpp b/src/states_screens/race_gui.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/race_gui.hpp b/src/states_screens/race_gui.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/race_gui_base.cpp b/src/states_screens/race_gui_base.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/race_gui_base.hpp b/src/states_screens/race_gui_base.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/race_gui_multitouch.cpp b/src/states_screens/race_gui_multitouch.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/race_gui_multitouch.hpp b/src/states_screens/race_gui_multitouch.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/race_gui_overworld.cpp b/src/states_screens/race_gui_overworld.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/race_gui_overworld.hpp b/src/states_screens/race_gui_overworld.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/race_result_gui.cpp b/src/states_screens/race_result_gui.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/race_result_gui.hpp b/src/states_screens/race_result_gui.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/race_setup_screen.cpp b/src/states_screens/race_setup_screen.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/race_setup_screen.hpp b/src/states_screens/race_setup_screen.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/soccer_setup_screen.cpp b/src/states_screens/soccer_setup_screen.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/soccer_setup_screen.hpp b/src/states_screens/soccer_setup_screen.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/state_manager.cpp b/src/states_screens/state_manager.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/state_manager.hpp b/src/states_screens/state_manager.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/track_info_screen.cpp b/src/states_screens/track_info_screen.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/track_info_screen.hpp b/src/states_screens/track_info_screen.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/tracks_and_gp_screen.cpp b/src/states_screens/tracks_and_gp_screen.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/states_screens/tracks_and_gp_screen.hpp b/src/states_screens/tracks_and_gp_screen.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/tips/tips_manager.cpp b/src/tips/tips_manager.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/tips/tips_manager.hpp b/src/tips/tips_manager.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/tracks/arena_graph.cpp b/src/tracks/arena_graph.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/tracks/arena_graph.hpp b/src/tracks/arena_graph.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/tracks/arena_node.cpp b/src/tracks/arena_node.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/tracks/arena_node.hpp b/src/tracks/arena_node.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/tracks/arena_node_3d.hpp b/src/tracks/arena_node_3d.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/tracks/bezier_curve.cpp b/src/tracks/bezier_curve.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/tracks/bezier_curve.hpp b/src/tracks/bezier_curve.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/tracks/bounding_box_3d.hpp b/src/tracks/bounding_box_3d.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/tracks/check_cannon.cpp b/src/tracks/check_cannon.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/tracks/check_cannon.hpp b/src/tracks/check_cannon.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/tracks/check_cylinder.cpp b/src/tracks/check_cylinder.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/tracks/check_cylinder.hpp b/src/tracks/check_cylinder.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/tracks/check_goal.cpp b/src/tracks/check_goal.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/tracks/check_goal.hpp b/src/tracks/check_goal.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/tracks/check_lap.cpp b/src/tracks/check_lap.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/tracks/check_lap.hpp b/src/tracks/check_lap.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/tracks/check_line.cpp b/src/tracks/check_line.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/tracks/check_line.hpp b/src/tracks/check_line.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/tracks/check_manager.cpp b/src/tracks/check_manager.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/tracks/check_manager.hpp b/src/tracks/check_manager.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/tracks/check_sphere.cpp b/src/tracks/check_sphere.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/tracks/check_sphere.hpp b/src/tracks/check_sphere.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/tracks/check_structure.cpp b/src/tracks/check_structure.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/tracks/check_structure.hpp b/src/tracks/check_structure.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/tracks/check_trigger.cpp b/src/tracks/check_trigger.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/tracks/check_trigger.hpp b/src/tracks/check_trigger.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/tracks/drive_graph.cpp b/src/tracks/drive_graph.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/tracks/drive_graph.hpp b/src/tracks/drive_graph.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/tracks/drive_node.cpp b/src/tracks/drive_node.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/tracks/drive_node.hpp b/src/tracks/drive_node.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/tracks/drive_node_2d.cpp b/src/tracks/drive_node_2d.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/tracks/drive_node_2d.hpp b/src/tracks/drive_node_2d.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/tracks/drive_node_3d.cpp b/src/tracks/drive_node_3d.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/tracks/drive_node_3d.hpp b/src/tracks/drive_node_3d.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/tracks/graph.cpp b/src/tracks/graph.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/tracks/graph.hpp b/src/tracks/graph.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/tracks/model_definition_loader.cpp b/src/tracks/model_definition_loader.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/tracks/model_definition_loader.hpp b/src/tracks/model_definition_loader.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/tracks/quad.cpp b/src/tracks/quad.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/tracks/quad.hpp b/src/tracks/quad.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/tracks/terrain_info.cpp b/src/tracks/terrain_info.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/tracks/terrain_info.hpp b/src/tracks/terrain_info.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/tracks/track.cpp b/src/tracks/track.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/tracks/track.hpp b/src/tracks/track.hpp
+old mode 100644
+new mode 100755
+index 9c5df37ed..77b44bfff
+--- a/src/tracks/track.hpp
++++ b/src/tracks/track.hpp
+@@ -666,7 +666,7 @@ public:
+     bool isInternal() const { return m_internal; }
+     // ------------------------------------------------------------------------
+     /** Returns true if auto rescue is enabled. */
+-    bool isAutoRescueEnabled() const { return m_enable_auto_rescue; }
++    bool isAutoRescueEnabled() const { return false/*m_enable_auto_rescue*/; }
+     // ------------------------------------------------------------------------
+     /** True if push back of karts towards the track should be enabled. */
+     bool isPushBackEnabled() const { return m_enable_push_back; }
+diff --git a/src/tracks/track_manager.cpp b/src/tracks/track_manager.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/tracks/track_manager.hpp b/src/tracks/track_manager.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/tracks/track_object.cpp b/src/tracks/track_object.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/tracks/track_object.hpp b/src/tracks/track_object.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/tracks/track_object_manager.cpp b/src/tracks/track_object_manager.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/tracks/track_object_manager.hpp b/src/tracks/track_object_manager.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/tracks/track_object_presentation.cpp b/src/tracks/track_object_presentation.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/tracks/track_object_presentation.hpp b/src/tracks/track_object_presentation.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/tracks/track_sector.cpp b/src/tracks/track_sector.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/tracks/track_sector.hpp b/src/tracks/track_sector.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/utils/aligned_array.hpp b/src/utils/aligned_array.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/utils/can_be_deleted.hpp b/src/utils/can_be_deleted.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/utils/command_line.cpp b/src/utils/command_line.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/utils/command_line.hpp b/src/utils/command_line.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/utils/constants.cpp b/src/utils/constants.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/utils/constants.hpp b/src/utils/constants.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/utils/cpp2011.hpp b/src/utils/cpp2011.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/utils/crash_reporting.cpp b/src/utils/crash_reporting.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/utils/crash_reporting.hpp b/src/utils/crash_reporting.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/utils/debug.cpp b/src/utils/debug.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/utils/debug.hpp b/src/utils/debug.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/utils/download_assets_size.hpp b/src/utils/download_assets_size.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/utils/extract_mobile_assets.cpp b/src/utils/extract_mobile_assets.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/utils/extract_mobile_assets.hpp b/src/utils/extract_mobile_assets.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/utils/file_utils.cpp b/src/utils/file_utils.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/utils/file_utils.hpp b/src/utils/file_utils.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/utils/helpers.cpp b/src/utils/helpers.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/utils/helpers.hpp b/src/utils/helpers.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/utils/interpolation_array.hpp b/src/utils/interpolation_array.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/utils/leak_check.cpp b/src/utils/leak_check.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/utils/leak_check.hpp b/src/utils/leak_check.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/utils/log.cpp b/src/utils/log.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/utils/log.hpp b/src/utils/log.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/utils/mem_utils.hpp b/src/utils/mem_utils.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/utils/mini_glm.cpp b/src/utils/mini_glm.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/utils/no_copy.hpp b/src/utils/no_copy.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/utils/profiler.cpp b/src/utils/profiler.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/utils/profiler.hpp b/src/utils/profiler.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/utils/progress_bar_android.cpp b/src/utils/progress_bar_android.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/utils/progress_bar_android.hpp b/src/utils/progress_bar_android.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/utils/ptr_vector.hpp b/src/utils/ptr_vector.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/utils/random_generator.cpp b/src/utils/random_generator.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/utils/random_generator.hpp b/src/utils/random_generator.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/utils/singleton.hpp b/src/utils/singleton.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/utils/stk_process.cpp b/src/utils/stk_process.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/utils/stk_process.hpp b/src/utils/stk_process.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/utils/string_utils.cpp b/src/utils/string_utils.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/utils/string_utils.hpp b/src/utils/string_utils.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/utils/synchronised.hpp b/src/utils/synchronised.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/utils/time.cpp b/src/utils/time.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/utils/time.hpp b/src/utils/time.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/utils/tls.hpp b/src/utils/tls.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/utils/translation.cpp b/src/utils/translation.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/utils/translation.hpp b/src/utils/translation.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/utils/types.hpp b/src/utils/types.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/utils/utf8.h b/src/utils/utf8.h
+old mode 100644
+new mode 100755
+diff --git a/src/utils/utf8/checked.h b/src/utils/utf8/checked.h
+old mode 100644
+new mode 100755
+diff --git a/src/utils/utf8/core.h b/src/utils/utf8/core.h
+old mode 100644
+new mode 100755
+diff --git a/src/utils/utf8/unchecked.h b/src/utils/utf8/unchecked.h
+old mode 100644
+new mode 100755
+diff --git a/src/utils/vec3.cpp b/src/utils/vec3.cpp
+old mode 100644
+new mode 100755
+diff --git a/src/utils/vec3.hpp b/src/utils/vec3.hpp
+old mode 100644
+new mode 100755
+diff --git a/src/utils/vs.hpp b/src/utils/vs.hpp
+old mode 100644
+new mode 100755
+-- 
+2.49.0
+
