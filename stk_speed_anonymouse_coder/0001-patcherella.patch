@@ -1,0 +1,109 @@
+From ddcbea799d4844c81aca1f7ca07e12d068400db3 Mon Sep 17 00:00:00 2001
+Message-ID: <ddcbea799d4844c81aca1f7ca07e12d068400db3.1744489794.git.matahina@posteo.net>
+From: matahina <matahina@posteo.net>
+Date: Sat, 12 Apr 2025 22:29:44 +0200
+Subject: [PATCH] patcherella
+
+---
+ CMakeLists.txt                    | 8 ++++----
+ lib/enet/CMakeLists.txt           | 2 +-
+ lib/graphics_utils/CMakeLists.txt | 2 +-
+ lib/libsquish/CMakeLists.txt      | 2 +-
+ lib/tinygettext/CMakeLists.txt    | 2 +-
+ lib/wiiuse/CMakeLists.txt         | 8 ++++----
+ 6 files changed, 12 insertions(+), 12 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 25f707471..e708835d5 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -1,4 +1,4 @@
+-cmake_minimum_required(VERSION 2.8.4)
++cmake_minimum_required(VERSION 3.5)
+ 
+ # root CMakeLists for the SuperTuxKart project
+ project(SuperTuxKart)
+@@ -6,9 +6,9 @@ set(PROJECT_VERSION "git")
+ 
+ add_definitions( -DSUPERTUXKART_VERSION="${PROJECT_VERSION}" )
+ 
+-if(NOT (CMAKE_MAJOR_VERSION VERSION_LESS 3))
+-  cmake_policy(SET CMP0043 OLD)
+-endif()
++# if(NOT (CMAKE_MAJOR_VERSION VERSION_LESS 3))
++#   cmake_policy(SET CMP0043 OLD)
++# endif()
+ 
+ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${PROJECT_SOURCE_DIR}/cmake")
+ include(CMakeDependentOption)
+diff --git a/lib/enet/CMakeLists.txt b/lib/enet/CMakeLists.txt
+index 4176552c7..25b0639d5 100644
+--- a/lib/enet/CMakeLists.txt
++++ b/lib/enet/CMakeLists.txt
+@@ -1,4 +1,4 @@
+-cmake_minimum_required(VERSION 2.6)
++cmake_minimum_required(VERSION 3.5)
+ 
+ project(enet)
+ 
+diff --git a/lib/graphics_utils/CMakeLists.txt b/lib/graphics_utils/CMakeLists.txt
+index 893624dfc..badaea358 100644
+--- a/lib/graphics_utils/CMakeLists.txt
++++ b/lib/graphics_utils/CMakeLists.txt
+@@ -1,4 +1,4 @@
+-cmake_minimum_required(VERSION 2.6)
++cmake_minimum_required(VERSION 3.5)
+ include_directories("${PROJECT_SOURCE_DIR}/lib/simd_wrapper")
+ if (UNIX OR MINGW)
+     add_definitions(-O3)
+diff --git a/lib/libsquish/CMakeLists.txt b/lib/libsquish/CMakeLists.txt
+index f271694d6..c59199df2 100644
+--- a/lib/libsquish/CMakeLists.txt
++++ b/lib/libsquish/CMakeLists.txt
+@@ -8,7 +8,7 @@
+ #   Unix and VS: SSE2 support is enabled by default
+ #    use BUILD_SQUISH_WITH_SSE2 and BUILD_SQUISH_WITH_ALTIVEC to override
+ 
+-CMAKE_MINIMUM_REQUIRED(VERSION 2.8.3)
++CMAKE_MINIMUM_REQUIRED(VERSION 3.5)
+ 
+ OPTION(BUILD_SQUISH_WITH_OPENMP "Build with OpenMP." OFF)
+ 
+diff --git a/lib/tinygettext/CMakeLists.txt b/lib/tinygettext/CMakeLists.txt
+index 5a67ab425..72a632495 100644
+--- a/lib/tinygettext/CMakeLists.txt
++++ b/lib/tinygettext/CMakeLists.txt
+@@ -39,7 +39,7 @@ set(VERSION "0.1.0")
+ 
+ ### CMake configuration
+ 
+-cmake_minimum_required(VERSION 2.4)
++cmake_minimum_required(VERSION 3.5)
+ if(COMMAND cmake_policy)
+ 	CMAKE_POLICY(SET CMP0003 NEW)
+ endif(COMMAND cmake_policy)
+diff --git a/lib/wiiuse/CMakeLists.txt b/lib/wiiuse/CMakeLists.txt
+index e56a750ae..51ad28a89 100644
+--- a/lib/wiiuse/CMakeLists.txt
++++ b/lib/wiiuse/CMakeLists.txt
+@@ -2,13 +2,13 @@
+ # http://academic.cleardefinition.com/
+ # Iowa State University HCI Graduate Program/VRAC
+ 
+-cmake_minimum_required(VERSION 2.8.0)
++cmake_minimum_required(VERSION 3.5)
+ 
+ # Added for STK, silences CMake warning
+ # See https://github.com/supertuxkart/stk-code/commit/b0ff15873ee7fa8901672672b47def9039a5534b#diff-a3e272598233e89e4b577a434cc2a89d
+-if(NOT (CMAKE_MAJOR_VERSION VERSION_LESS 3))
+-  cmake_policy(SET CMP0048 OLD)
+-endif()
++# if(NOT (CMAKE_MAJOR_VERSION VERSION_LESS 3))
++#   cmake_policy(SET CMP0048 OLD)
++# endif()
+ 
+ # Set package properties
+ project(WiiUse)
+-- 
+2.49.0
+
