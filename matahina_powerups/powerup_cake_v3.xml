@@ -243,7 +243,7 @@
   <battle-weight-list>
     <weights num-karts="1">
       <!--              bubble  cake  bowl  zipper  plunger  switch swattr rubber para  anvil -->
-      <weight single  ="10     100    60    20       10      30      20     0    20     0"
+      <weight single  ="10     500    60    20       10      30      20     0    20     0"
               multi   =" 0       0     5     0       10       0       0     0     0     0"    />
     </weights>
   </battle-weight-list>
