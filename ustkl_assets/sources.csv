@@ -1,0 +1,22 @@
+id,version,name,stk_version,powerup,kart_characteristics
+standard,1.4,orig,1,https://raw.githubusercontent.com/supertuxkart/stk-code/refs/tags/1.4/data/powerup.xml,https://raw.githubusercontent.com/supertuxkart/stk-code/refs/tags/1.4/data/kart_characteristics.xml
+random (mimiz),1,random,1,https://stk.kimden.online/public/powerup_mimiz.xml,standard
+rebalanced (mimiz) v3,3,rebalanced3,1,https://stk.kimden.online/public/rebalanced.xml,standard
+rebalanced (mimiz) v2,2,rebalanced2,1,https://stk.kimden.online/public/rebalanced_previous.xml,standard
+rebalanced (mimiz) v1,1,rebalanced1,1,https://stk.kimden.online/public/rebalanced_previous2.xml,standard
+plungers (matahina) v0,0,plungers0,1,https://raw.githubusercontent.com/matahina/Miscellanous-STK-files/main/matahina_powerups/powerup_plungers.xml,standard
+cake (matahina) v3,3,cake3,1,https://raw.githubusercontent.com/matahina/Miscellanous-STK-files/main/matahina_powerups/powerup_cake_v3.xml,standard
+cake (matahina) v2,2,cake2,1,https://raw.githubusercontent.com/matahina/Miscellanous-STK-files/main/matahina_powerups/powerup_cake_v2.xml,standard
+cake (matahina) v1,1,cake1,1,https://raw.githubusercontent.com/matahina/Miscellanous-STK-files/main/matahina_powerups/powerup_cake_v1.xml,standard
+cake (matahina) v0,0,cake0,1,https://raw.githubusercontent.com/matahina/Miscellanous-STK-files/main/matahina_powerups/powerup_cake_v0.xml,standard
+gums (matahina) v1,1,gums1,1,https://raw.githubusercontent.com/matahina/Miscellanous-STK-files/main/matahina_powerups/powerup_gums_v1.xml,standard
+YEET (Iluvatyr),1,yeet,1,https://raw.githubusercontent.com/matahina/Miscellanous-STK-files/refs/heads/main/luva_rowdy_yeet/powerup_yeet.xml,https://raw.githubusercontent.com/matahina/Miscellanous-STK-files/refs/heads/main/luva_rowdy_yeet/kart_characteristics_yeet.xml
+FF April Fools 2023,1,aprfool23,1,https://stk.kimden.online/public/powerup_mimiz.xml,https://stk.kimden.online/public/230401.xml
+FF April Fools 2022,1,aprfool22,1,https://stk.kimden.online/public/0104.xml,standard
+FF HALLOWEEN,1,halloween,1,https://stk.kimden.online/public/trending.xml,https://stk.kimden.online/public/hups.xml
+FF Special 3years 2022-11-20,1,triple2211,1,https://stk.kimden.online/public/triple.xml,standard
+FF Special Poll 2022-12-18,1,poll2212,1,https://stk.kimden.online/public/poll.xml,standard
+FF Special 2023-01-21,1,2301,1,https://stk.kimden.online/public/230121.xml,standard
+standard,2,STK2,2,https://raw.githubusercontent.com/Alayan-stk-2/stk-code/BalanceSTK2/data/powerup.xml,https://raw.githubusercontent.com/Alayan-stk-2/stk-code/BalanceSTK2/data/kart_characteristics.xml
+standard,2,STK2_EMT,3,https://raw.githubusercontent.com/matahina/stk-code-emt-fixed/refs/heads/tyre2x-fixed/data/powerup.xml,https://raw.githubusercontent.com/matahina/stk-code-emt-fixed/refs/heads/tyre2x-fixed/data/kart_characteristics.xml
+experimental,2,STK2_EMT_EXP,3,standard,https://matahina.ddns.net/kart_EXP.xml
