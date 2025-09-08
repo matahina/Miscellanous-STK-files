@@ -1,0 +1,18 @@
+recipe:
+  name: stk2-git
+  stk-version: 2
+
+assets:
+  type: git
+  url: https://github.com/Pttn/stk-assets.git
+  updatable: yes
+
+code:
+  type: git
+  url: standard
+  release: none
+  commit: none
+  branch: BalanceSTK2
+  patch: none
+  updatable: yes
+  cmake_options: -DCMAKE_BUILD_TYPE=Debug -DNO_SHADERC=ON

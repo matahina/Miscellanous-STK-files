@@ -1,0 +1,18 @@
+recipe:
+  name: stk2-emt-git
+  stk-version: 3
+
+assets:
+  type: git
+  url: https://github.com/Nomagno/stk-assets.git
+  updatable: yes
+
+code:
+  type: git
+  url: https://github.com/matahina/stk-code-emt-fixed.git
+  release: none
+  commit: none
+  branch: tyre2x-fixed
+  patch: none
+  updatable: yes
+  cmake_options: -DCMAKE_BUILD_TYPE=Debug -DNO_SHADERC=ON

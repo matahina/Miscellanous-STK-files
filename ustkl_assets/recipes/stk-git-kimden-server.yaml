@@ -1,0 +1,18 @@
+recipe:
+  name: stk-git-kimden-server
+  stk-version: 1
+
+assets:
+  type: standard
+  # url: none
+  # updatable: no
+
+code:
+  type: git
+  url: https://github.com/kimden/stk-code.git
+  release: none
+  commit: none
+  branch: none
+  patch: none
+  updatable: yes
+  cmake_options: -DSERVER_ONLY=ON -DUSE_SQLITE3=ON -DWEB_SUPPORT=ON -DUSE_RECORDS_V2=ON -DCMAKE_BUILD_TYPE=RelWithDebInfo

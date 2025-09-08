@@ -1,0 +1,20 @@
+recipe:
+  name: stk-speed
+  stk-version: 1
+
+assets:
+  type: standard
+  # url: none
+  # updatable: no
+
+code:
+  type: git
+  url: standard
+  release: none
+  commit: 42d4eaa
+  branch: none
+  patch:
+    p_01: https://raw.githubusercontent.com/matahina/Miscellanous-STK-files/refs/heads/main/stk_speed_anonymouse_coder/0001-the_patch_for_stk_speed.patch
+    p_02: https://raw.githubusercontent.com/matahina/Miscellanous-STK-files/refs/heads/main/stk_speed_anonymouse_coder/0001-patcherella.patch
+  updatable: no
+  cmake_options: -DCMAKE_BUILD_TYPE=RelWithDebInfo

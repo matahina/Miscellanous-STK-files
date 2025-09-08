@@ -1,0 +1,20 @@
+recipe:
+  name: xxxxyyyyyyy
+  stk-version: 2 # 1 for 1.x, 2 for 2.x, 3 for TME
+
+assets:
+  type: none # standard, git, svn, archive
+  url: none # https://...
+  updatable: no # yes, no
+
+code:
+  type: git # standard, git, svn, archive
+  url: none # https://...
+  release: tags # none, tags
+  commit: none # [commit-hash]
+  branch: none # [branch name]
+  patch: none # none or options
+    #p_01: https://...
+    #p_02: https://...
+  updatable: no # yes, no
+  cmake_options: # none, -DCMAKE_THING=... - DCMAKE_THING2=...
