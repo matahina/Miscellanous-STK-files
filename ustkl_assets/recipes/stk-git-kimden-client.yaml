@@ -1,5 +1,5 @@
 recipe:
-  name: stk-git-kimden-client
+  name: Kimden fork! (local client)
   stk-version: 1
 
 assets:
