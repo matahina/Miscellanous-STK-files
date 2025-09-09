@@ -1,5 +1,5 @@
 recipe:
-  name: stk-git-kimden-server
+  name: stk-git-kimden
   stk-version: 1
 
 assets:
