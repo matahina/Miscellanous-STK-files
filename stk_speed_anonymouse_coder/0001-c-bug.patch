@@ -1,0 +1,27 @@
+From 6f779670a2cd687ab05b1626aa9991309abe75a5 Mon Sep 17 00:00:00 2001
+From: matahina <matahina@posteo.net>
+Date: Thu, 11 Sep 2025 19:31:58 +0200
+Subject: [PATCH] c++ bug
+
+---
+ src/network/remote_kart_info.hpp | 1 +
+ 1 file changed, 1 insertion(+)
+ mode change 100644 => 100755 src/network/remote_kart_info.hpp
+
+diff --git a/src/network/remote_kart_info.hpp b/src/network/remote_kart_info.hpp
+old mode 100644
+new mode 100755
+index 80a6339..9865dcd
+--- a/src/network/remote_kart_info.hpp
++++ b/src/network/remote_kart_info.hpp
+@@ -29,6 +29,7 @@
+ #include <string>
+ #include <vector>
+ #include <irrString.h>
++#include <cstdint>
+ 
+ enum KartTeam : int8_t
+ {
+--
+libgit2 1.9.1
+
