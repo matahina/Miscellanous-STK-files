@@ -8,8 +8,8 @@ assets:
   updatable: no # yes, no
 
 code:
-  type: git # standard, git, svn, archive
-  url: none # https://...
+  type: git # git, not other way implemented yet
+  url: none # standard or https://...
   release: tags # none, tags # MANDATORY!
   commit: none # [commit-hash]
   branch: none # [branch name]
