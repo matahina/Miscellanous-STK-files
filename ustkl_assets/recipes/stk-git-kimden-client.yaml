@@ -14,6 +14,6 @@ code:
   commit: none
   branch: local-client
   patch:
-    p_01: https://raw.githubusercontent.com/matahina/Miscellanous-STK-files/refs/heads/main/patch_the_kimden_local_client/0001-the_commit.patch
+    p_01: https://raw.githubusercontent.com/matahina/Miscellaneous-STK-files/refs/heads/main/patch_the_kimden_local_client/0001-the_commit.patch
   updatable: yes
   cmake_options: -DCMAKE_BUILD_TYPE=RelWithDebInfo
