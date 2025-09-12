@@ -1,5 +1,5 @@
 recipe:
-  name: stk-git
+  name: STK Official (git)
   stk-version: 1
 
 assets:
