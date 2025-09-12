@@ -1,5 +1,5 @@
 recipe:
-  name: stk2-emt-git
+  name: STK2 EMT (Eat My Tyre) Edition (git)
   stk-version: 3
 
 assets:

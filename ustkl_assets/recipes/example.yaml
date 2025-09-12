@@ -10,7 +10,7 @@ assets:
 code:
   type: git # standard, git, svn, archive
   url: none # https://...
-  release: tags # none, tags
+  release: tags # none, tags # MANDATORY!
   commit: none # [commit-hash]
   branch: none # [branch name]
   patch: none # none or options
