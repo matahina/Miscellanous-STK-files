@@ -19,4 +19,4 @@ FF Special Poll 2022-12-18,1,poll2212,1,https://stk.kimden.online/public/poll.xm
 FF Special 2023-01-21,1,2301,1,https://stk.kimden.online/public/230121.xml,standard
 standard,2,STK2,2,https://raw.githubusercontent.com/Alayan-stk-2/stk-code/BalanceSTK2/data/powerup.xml,https://raw.githubusercontent.com/Alayan-stk-2/stk-code/BalanceSTK2/data/kart_characteristics.xml
 standard,2,STK2_EMT,3,https://raw.githubusercontent.com/matahina/stk-code-emt-fixed/refs/heads/tyre2x-fixed/data/powerup.xml,https://raw.githubusercontent.com/matahina/stk-code-emt-fixed/refs/heads/tyre2x-fixed/data/kart_characteristics.xml
-experimental,2,STK2_EMT_EXP,3,standard,https://matahina.ddns.net/kart_EXP.xml
+experimental,2,STK2_EMT_EXP,3,standard,https://raw.githubusercontent.com/matahina/Miscellaneous-STK-files/main/matahina_tyres/kart_EXP.xml
